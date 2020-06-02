@@ -19,6 +19,7 @@ namespace HW
 
         {
             Application.EnableVisualStyles();
+
             Application.SetCompatibleTextRenderingDefault(false);
 
 

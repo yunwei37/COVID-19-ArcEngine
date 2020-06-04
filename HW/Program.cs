@@ -18,6 +18,7 @@ namespace HW
         static void Main()
 
 
+
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

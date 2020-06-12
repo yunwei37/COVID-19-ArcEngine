@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.GeoAnalyst</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IConversionOp">
+      <summary>Provides access to members that convert between raster and feature data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IConversionOp.RasterDataToLineFeatureData(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.Boolean,System.Boolean,System.Object@)">
+      <summary>Convert raster data to feature data (FeatureClass or FeatureDataset).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IConversionOp.RasterDataToPointFeatureData(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+      <summary>Convert raster data to feature data (FeatureClass or FeatureDataset).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IConversionOp.RasterDataToPolygonFeatureData(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.Boolean)">
+      <summary>Convert raster data to feature data (FeatureClass or FeatureDataset).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IConversionOp.ToFeatureData(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.esriGeometryType,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+      <summary>Convert to feature data (FeatureClass or FeatureDataset).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IConversionOp.ToRasterDataset(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String)">
+      <summary>Convert to a RasterDataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor">
+      <summary>Provides access to members that control the FeatureClass descriptor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.Create(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String)">
+      <summary>Creates a FeatureClass descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.FeatureClass">
+      <summary>The FeatureClass in the descriptor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.CreateFromSelectionSet(ESRI.ArcGIS.Geodatabase.ISelectionSet,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String)">
+      <summary>Creates a GeoDataset descriptor with a SelectionSet.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.Field">
+      <summary>The field of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.FieldName">
+      <summary>The field name of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.QueryFilter">
+      <summary>The query filter of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IFeatureClassDescriptor.SelectionSet">
+      <summary>The SelectionSet of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisEnvironment">
+      <summary>Provides access to members that control the GeoAnalysis environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisEnvironment.OutSpatialReference">
+      <summary>The output spatial reference of GeoAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisEnvironment.OutWorkspace">
+      <summary>The output workspace of GeoAnalysis.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram">
+      <summary>Provides access to members that control the Interpolation semi-variogram object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.DefineVariogram(ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum,System.Double,System.Double,System.Double)">
+      <summary>Define Variogram.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.Lag">
+      <summary>Lag value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.Nugget">
+      <summary>Nugget value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.PartialSill">
+      <summary>Partial Sill value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.Range">
+      <summary>Range value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram.VariogramType">
+      <summary>Variogram Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor">
+      <summary>Provides access to members that control the GeoDataset descriptor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor.CreateFromSelectionSet(ESRI.ArcGIS.Geodatabase.ISelectionSet,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String)">
+      <summary>Creates a GeoDataset descriptor with a SelectionSet.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor.Field">
+      <summary>The field of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor.FieldName">
+      <summary>The field name of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor.QueryFilter">
+      <summary>The query filter of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeoDataDescriptor.SelectionSet">
+      <summary>The SelectionSet of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGeodesicAspectFunctionArguments">
+      <summary>The geodesic aspect function arguments</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeodesicAspectFunctionArguments.Raster">
+      <summary>The input raster</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeodesicAspectFunctionArguments.ZMetersPerUnit">
+      <summary>The z factor</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGeodesicSlopeFunctionArguments">
+      <summary>The geodesic slope function arguments</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeodesicSlopeFunctionArguments.Raster">
+      <summary>The input raster</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeodesicSlopeFunctionArguments.SlopeType">
+      <summary>The slope type</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IGeodesicSlopeFunctionArguments.ZMetersPerUnit">
+      <summary>The z factor</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IGridTableOp">
+      <summary>Provides access to members that performs grid VAT operations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IGridTableOp.AddField(ESRI.ArcGIS.Geodatabase.IRasterDataset,ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>Add a field to the fields collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IGridTableOp.DeleteField(ESRI.ArcGIS.Geodatabase.IRasterDataset,ESRI.ArcGIS.Geodatabase.IField)">
+      <summary>Delete a field from the fields collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IGridTableOp.Update(ESRI.ArcGIS.Geodatabase.IRasterDataset,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.Boolean)">
+      <summary>Returns a cursor that can be used to update Rows selected by the specified query.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp">
+      <summary>Provides access to members that control the Interpolating of a GeoDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp.IDW(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Object@)">
+      <summary>Interpolates using IDW.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp.Krige(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using kriging.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp.Spline(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum,System.Object@,System.Object@)">
+      <summary>Interpolates using splining.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp.Trend(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum,System.Int32)">
+      <summary>Interpolates using trend surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp.Variogram(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using Variogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2">
+      <summary>Provides access to additional members that control the Interpolating of a GeoDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.IDW(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Object@)">
+      <summary>Interpolates using IDW.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.Krige(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using kriging.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.NaturalNeighbor(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Interpolates using natual neighbor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.Spline(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum,System.Object@,System.Object@)">
+      <summary>Interpolates using splining.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.TopoToRasterByFile(System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass@,ESRI.ArcGIS.Geodatabase.IFeatureClass@)">
+      <summary>Interpolates using AnuDem.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.Trend(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum,System.Int32)">
+      <summary>Interpolates using trend surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp2.Variogram(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using Variogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3">
+      <summary>Provides access to additional members that control the Interpolating of a GeoDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.IDW(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Object@)">
+      <summary>Interpolates using IDW.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.Krige(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using kriging.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.NaturalNeighbor(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Interpolates using natual neighbor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.Spline(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum,System.Object@,System.Object@)">
+      <summary>Interpolates using splining.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.TopoToRasterByFile(System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass@,ESRI.ArcGIS.Geodatabase.IFeatureClass@)">
+      <summary>Interpolates using AnuDem.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.Trend(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum,System.Int32)">
+      <summary>Interpolates using trend surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.TrendWithRms(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum,System.Int32,System.String)">
+      <summary>Interpolates using trend surface with optional rms file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IInterpolationOp3.Variogram(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.IGeoAnalysisSemiVariogram,ESRI.ArcGIS.GeoAnalyst.IRasterRadius,System.Boolean,System.Object@)">
+      <summary>Interpolates using Variogram.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp">
+      <summary>Provides access to members that control the mathematical operations for support other products.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Divide(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Divides the values of two inputs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Float(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Converts a raster into floating point representation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Int(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Converts a raster to integer by truncation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Minus(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Subtracts the values of two inputs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Plus(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Adds the values of two inputs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IMathSupportOp.Times(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Multiplies the values of two inputs.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IMLClassifyFunctionArguments">
+      <summary>Provides access to members that control ML classification function arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IMLClassifyFunctionArguments.Raster">
+      <summary>The input raster for conversion.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IMLClassifyFunctionArguments.SignatureFile">
+      <summary>The class signature file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.INumberRemap">
+      <summary>Provides access to members that control reclassification of numerical data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.LoadNumbersFromASCIIFile(System.String)">
+      <summary>Loads the information from an ArcGRID ASCII remap file into a remap object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.LoadNumbersFromTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,System.Object,System.Object)">
+      <summary>Load number remap records from a table object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.MapRange(System.Double,System.Double,System.Int32)">
+      <summary>Maps a range entry to the remap object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.MapRangeToNoData(System.Double,System.Double)">
+      <summary>Maps a range entry to nodata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.MapValue(System.Double,System.Int32)">
+      <summary>Maps a single value entry to the remap object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.MapValueToNoData(System.Double)">
+      <summary>Maps a single value entry to nodata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.QueryNumberRecord(System.Int32,System.Double@,System.Double@,System.Int32@,System.Boolean@)">
+      <summary>Returns number record information by index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.INumberRemap.QueryNumberValue(System.Double,System.Int32@,System.Boolean@)">
+      <summary>Returns the mapped value for a number remap entry.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment">
+      <summary>Provides access to members that control the environment for raster analysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.DefaultOutputRasterPrefix">
+      <summary>The default output raster prefix.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.DefaultOutputVectorPrefix">
+      <summary>The default output vector prefix.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.GetCellSize(ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum@,System.Double@)">
+      <summary>Gets the type and value of cell size in the RasterAnalysis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.GetExtent(ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum@,ESRI.ArcGIS.Geometry.IEnvelope@)">
+      <summary>Gets the type and values of extent in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.Mask">
+      <summary>Mask allows processing to occur only for a selected set of cells.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.Reset">
+      <summary>Remove all previously stored default rasteranalysis environments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.RestoreToPreviousDefaultEnvironment">
+      <summary>Restores to the previous default raster analysis environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.SetAsNewDefaultEnvironment">
+      <summary>Sets the raster analysis environment of the object as new default environment.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.SetCellSize(ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum,System.Object@)">
+      <summary>Sets the type and value of cell size in the RasterAnalysis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.SetExtent(ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum,System.Object@,System.Object@)">
+      <summary>Sets the type and values of extent in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.VerifyType">
+      <summary>The verify type of the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.OutSpatialReference">
+      <summary>The output spatial reference of GeoAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment.OutWorkspace">
+      <summary>The output workspace of GeoAnalysis.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment">
+      <summary>Provides access to members that control the environment for Geodatabase raster analysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.BuildPyramid">
+      <summary>Indicates if the pyramid building in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.CalculateStatistics">
+      <summary>Indicates if the statistics calculation in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.CompressionType">
+      <summary>The type and value of compression in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.ConfigurationKeyword">
+      <summary>The configuration keyword in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.GDBDomains">
+      <summary>The XY, Z and M domains in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.GlobeOptimized">
+      <summary>Indicates if the globe optimized type in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.IgnoredValue">
+      <summary>The ignored value in statistics calculation in RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.JpegQuality">
+      <summary>Jpeg compression quality in the RasterAnalysis. This corresponds to the compression quality geoprocessing environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.MaxError">
+      <summary>Max Error for LERC compression.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.MosaicType">
+      <summary>The mosaic type in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.PyramidLevel">
+      <summary>The level in pyramid building in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.PyramidResampleType">
+      <summary>The resample type in pyramid building in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.TileHeight">
+      <summary>The GeoDatabase tile height in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.TileWidth">
+      <summary>The GeoDatabase tile width in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.XSkipFactor">
+      <summary>The skip factor in X direction in statistics calculation in the RasterAnalysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGDBEnvironment.YSkipFactor">
+      <summary>The skip factor in Y direction in statistics calculation in the RasterAnalysis.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGlobalEnvironment">
+      <summary>Provides access to members that control the global environment for raster analysis.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisGlobalEnvironment.AvoidDataConversion">
+      <summary>Indicates weather to avoid data conversion in the RasterAnalysis.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterConvertHelper">
+      <summary>Provides access to members that convert geodatasets to rasters or feature classes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterConvertHelper.ToRaster1(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String,ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment)">
+      <summary>Converts a GeoDataset to a Raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterConvertHelper.ToRaster2(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String,ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment,ESRI.ArcGIS.Geodatabase.IRaster@,ESRI.ArcGIS.Geodatabase.IRaster@)">
+      <summary>Converts two GeoDatasets to two Rasters.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterConvertHelper.ToRaster3(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String,ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment,ESRI.ArcGIS.Geodatabase.IRaster@,ESRI.ArcGIS.Geodatabase.IRaster@,ESRI.ArcGIS.Geodatabase.IRaster@)">
+      <summary>Converts three GeoDatasets to three Rasters.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterConvertHelper.ToShapefile(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.esriGeometryType,ESRI.ArcGIS.GeoAnalyst.IRasterAnalysisEnvironment)">
+      <summary>Converts a GeoDataset to a shapefile.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor">
+      <summary>Provides access to members that control the Raster descriptor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.Create(ESRI.ArcGIS.Geodatabase.IRaster,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String)">
+      <summary>Create a Raster descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.Raster">
+      <summary>The Raster in the descriptor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.CreateFromSelectionSet(ESRI.ArcGIS.Geodatabase.ISelectionSet,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String)">
+      <summary>Creates a GeoDataset descriptor with a SelectionSet.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.Field">
+      <summary>The field of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.FieldName">
+      <summary>The field name of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.QueryFilter">
+      <summary>The query filter of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterDescriptor.SelectionSet">
+      <summary>The SelectionSet of the GeoDataset descriptor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterExportOp">
+      <summary>Provides access to members that control the export to raster formats.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterExportOp.ExportToASCII(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String)">
+      <summary>Exports a raster dataset to a GRID ASCII file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterExportOp.ExportToFloat(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String)">
+      <summary>Exports a raster dataset to a Float GRID file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterFunctionMemoryUtil">
+      <summary>Provides access to members that memory support for raster function.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterFunctionMemoryUtil.GetWorkingPixelBlockSize(ESRI.ArcGIS.DataSourcesRaster.IRawBlocks,System.Double,System.Int32@,System.Int32@)">
+      <summary>The wroking pixel block size that the raster function uses</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp">
+      <summary>Provides access to members that control the import of raster formats.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp.ImportFromASCII(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String,System.Boolean)">
+      <summary>Imports a GRID ASCII file into a RasterDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp.ImportFromFLOAT(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)">
+      <summary>Imports a Float GRID file into a RasterDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp.ImportFromUSGSDEM(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)">
+      <summary>Imports a USGS DEM file into a RasterDataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp2">
+      <summary>Provides access to additional members that control the import of raster formats.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp2.ImportFromASCII(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String,System.Boolean)">
+      <summary>Imports a GRID ASCII file into a RasterDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp2.ImportFromFLOAT(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String)">
+      <summary>Imports a Float GRID file into a RasterDataset.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterImportOp2.ImportFromUSGSDEM(System.String,ESRI.ArcGIS.Geodatabase.IWorkspace,System.String,System.String,System.Boolean,System.Object@)">
+      <summary>Imports a USGS DEM file into a RasterDataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterMakerOp">
+      <summary>Provides access to members that control the Raster Maker operations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterMakerOp.MakeConstant(System.Double,System.Boolean)">
+      <summary>Makes a constant raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterMakerOp.MakeNormal">
+      <summary>Makes a normally distributed raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterMakerOp.MakeRandom(System.Object)">
+      <summary>Makes a randomly distributed raster.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterModel">
+      <summary>Provides access to members that control the Raster Model.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BindFeatureClass(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String)">
+      <summary>Binds a symbol to a FeatureClass.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BindRaster(ESRI.ArcGIS.Geodatabase.IRaster,System.String)">
+      <summary>Binds a symbol to a Raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BindString(System.String,System.String)">
+      <summary>Binds a symbol to a String.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BindTable(ESRI.ArcGIS.Geodatabase.ITable,System.String)">
+      <summary>Binds a symbol to a Table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BoundFeatureClass(System.String)">
+      <summary>Finds the FeatureClass corresponding to a symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BoundRaster(System.String)">
+      <summary>Finds the Raster corresponding to a symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BoundTable(System.String)">
+      <summary>Finds the Table corresponding to a symbol.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterModel.BoundUnknown(System.String)">
+      <summary>Finds the interface pointer corresponding to a symbol.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.Execute">
+      <summary>Produces a Raster by executing a script.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterModel.Script">
+      <summary>The model script.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterModel.UnbindSymbol(System.String)">
+      <summary>Unbinds a symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood">
+      <summary>Provides access to members that control the analytical region used when performing neighborhood analsis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetAnnulus(System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets an annulus neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetCircle(System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a circle neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetDefault">
+      <summary>Sets a default neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetIrregular(System.Int32,System.Int32,System.Object@)">
+      <summary>Sets a neighborhood object each of whose entries can be turned on or off.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetRectangle(System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a rectangle neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetWedge(System.Double,System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a wedge neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood.SetWeight(System.Int32,System.Int32,System.Object@)">
+      <summary>Sets a neighborhood object each of whose entries can be assigned a weight.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2">
+      <summary>Provides access to additional members that control the analytical region used when performing neighborhood analsis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetAnnulus(System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets an annulus neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetCircle(System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a circle neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetDefault">
+      <summary>Sets a default neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetHighPassFilter">
+      <summary>Sets a 3 x 3 high-pass filter neighborhood.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetIrregular(System.Int32,System.Int32,System.Object@)">
+      <summary>Sets a neighborhood object each of whose entries can be turned on or off.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetIrregularFile(System.String)">
+      <summary>Sets an irregular neighborhood by a file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetLowPassFilter">
+      <summary>Sets a 3 x 3 low-pass filter neighborhood.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetRectangle(System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a rectangle neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetWedge(System.Double,System.Double,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum)">
+      <summary>Sets a wedge neighborhood object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetWeight(System.Int32,System.Int32,System.Object@)">
+      <summary>Sets a neighborhood object each of whose entries can be assigned a weight.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterNeighborhood2.SetWeightFile(System.String)">
+      <summary>Sets a weight neighborhood by a file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterOpBase">
+      <summary>Interface of RasterOpBase object</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterOpBase.AddOutputDatasetName(System.Int32,ESRI.ArcGIS.Geodatabase.IDatasetName)">
+      <summary>Adds an output dataset name to the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRasterOpBase.OutputDatasetNameArray">
+      <summary>Puts output name array.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRasterRadius">
+      <summary>Provides access to members that control the radius used to determine a surface through interpolation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterRadius.SetFixed(System.Double,System.Object@)">
+      <summary>Sets a fixed radius.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRasterRadius.SetVariable(System.Int32,System.Object@)">
+      <summary>Sets a variable radius.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IReclassOp">
+      <summary>Provides access to members that control the Reclass Operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IReclassOp.Lookup(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String)">
+      <summary>Creates a new raster by looking up values found in another field in the table of the input raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IReclassOp.Reclass(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,System.String,System.Boolean)">
+      <summary>Reclassifies (or changes) the values of the input cells of a raster by using a remap table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IReclassOp.ReclassByASCIIFile(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.String,System.Boolean)">
+      <summary>Reclassifies (or changes) the values of the input cells of a raster by using an ascii remap file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IReclassOp.ReclassByRemap(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.IRemap,System.Boolean)">
+      <summary>Reclassifies (or changes) the values of the input cells of a raster by using a remap that is built programmatically.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IReclassOp.Slice(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum,System.Int32,System.Object@)">
+      <summary>Slices a range of values of the input cells by zones of equal area or equal interval.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IRemap">
+      <summary>Provides access to members that control reclassification of data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.Clear">
+      <summary>Clears the remap object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.DeleteRecord(System.Int32)">
+      <summary>Deletes a remap record by index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.HasValueToNoData(System.Boolean@)">
+      <summary>Returns whether any record is mapped to nodata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.LoadFromTable(ESRI.ArcGIS.Geodatabase.ITable)">
+      <summary>Loads remap records from an ITable and creates the relevant remap object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRemap.MinOutputValue">
+      <summary>The minimum output value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRemap.NoDataTo">
+      <summary>The nodata value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.QueryNoDataTo(System.Boolean@,System.Int32@)">
+      <summary>Returns whether nodata is mapped and if so, the mapped value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.QueryRecord(System.Int32,System.String@,System.String@)">
+      <summary>Returns info for a remap record by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.GeoAnalyst.IRemap.RecordCount">
+      <summary>The number of remap records.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.RepresentAsTable">
+      <summary>Stores the remap records in an ITable.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.SaveAsTable(System.String)">
+      <summary>Saves the remap records to a table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IRemap.Validate(System.Boolean@,System.String@)">
+      <summary>Validates the remap records.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.IStringRemap">
+      <summary>Provides access to members that control reclassification of string data.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IStringRemap.LoadStringsFromTable(ESRI.ArcGIS.Geodatabase.ITable,System.String,System.String,System.Object)">
+      <summary>Loads string remap records from a table object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IStringRemap.MapString(System.String,System.Int32)">
+      <summary>Maps a string entry to the remap object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IStringRemap.MapStringToNoData(System.String)">
+      <summary>Maps a string entry to nodata.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IStringRemap.QueryStringRecord(System.Int32,System.String@,System.Int32@,System.Boolean@)">
+      <summary>Returns string record information by index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.IStringRemap.QueryStringValue(System.String,System.Int32@,System.Boolean@)">
+      <summary>Returns the mapped value for a string remap entry.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp">
+      <summary>Provides access to members that control the Surface Operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.Aspect(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Calculates Aspect.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.Contour(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Object@)">
+      <summary>Creates contours or isolines based off of a constant interval from a base contour.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.ContourAsPolyline(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IPolyline@,System.Double@)">
+      <summary>Creates a single contour or isoline that passes through a specified point on a surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.ContourList(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Object@)">
+      <summary>Creates contours or isolines based off a list of contour values.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.ContoursAsPolylines(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IPointCollection,ESRI.ArcGIS.Geometry.IGeometryCollection@,ESRI.ArcGIS.Geometry.IPointCollection@)">
+      <summary>Creates multiple contours or isolines that pass through specified points on a surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.Curvature(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Boolean,System.Boolean)">
+      <summary>Calculates curvature, optionally including profile and plan curvature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.CutFill(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Object@)">
+      <summary>Calculates cut and fill areas.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.HillShade(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Double,System.Boolean,System.Object@)">
+      <summary>Calculates Hillshade.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.Slope(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum,System.Object@)">
+      <summary>Calculates Slope.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp.Visibility(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum)">
+      <summary>Performs visibility analysis on a surface based on a set of input observation points.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2">
+      <summary>Provides access to additional members that control the Surface Operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Aspect(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Calculates Aspect.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Aspect2(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisAspectMethodEnum,System.Double)">
+      <summary>Calculates Aspect.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Contour(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Object@,System.Object@)">
+      <summary>Creates contours or isolines based off of a constant interval from a base contour.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.ContourAsPolyline(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IPoint,ESRI.ArcGIS.Geometry.IPolyline@,System.Double@)">
+      <summary>Creates a single contour or isoline that passes through a specified point on a surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.ContourList(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Object@)">
+      <summary>Creates contours or isolines based off a list of contour values.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.ContoursAsPolylines(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IPointCollection,ESRI.ArcGIS.Geometry.IGeometryCollection@,ESRI.ArcGIS.Geometry.IPointCollection@)">
+      <summary>Creates multiple contours or isolines that pass through specified points on a surface.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Curvature(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Boolean,System.Boolean,System.Object@)">
+      <summary>Calculates curvature, optionally including profile and plan curvature.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.CutFill(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Object@)">
+      <summary>Calculates cut and fill areas.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.HillShade(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Double,System.Boolean,System.Object@)">
+      <summary>Calculates Hillshade.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Slope(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum,System.Object@)">
+      <summary>Calculates Slope.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Slope2(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeMethodEnum,System.Double,System.Double)">
+      <summary>Calculates Slope.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ISurfaceOp2.Visibility(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum,System.Object@,System.Object@)">
+      <summary>Performs visibility analysis on a surface based on a set of input observation points.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.ITransformationOp">
+      <summary>Provides access to members that control the transformation operations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Clip(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Subsets a raster using a rectangle.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Flip(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Flips a raster along the horizontal axis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Mirror(ESRI.ArcGIS.Geodatabase.IGeoDataset)">
+      <summary>Mirrors a raster along the vertical axis.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Mosaic(ESRI.ArcGIS.DataSourcesRaster.IRasterBandCollection,ESRI.ArcGIS.DataSourcesRaster.rstMosaicOperatorType)">
+      <summary>Creates one raster from two or more adjacent rasters and makes a smooth transition over the overlapping areas of the neighboring rasters.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.ProjectFast(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.ISpatialReference,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum,System.Object@)">
+      <summary>Converts a raster between two coordinate systems on region bases.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Resample(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum)">
+      <summary>Resamples raster to a new cell size.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.ReScale(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Double)">
+      <summary>Scales the coordinates of a raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Rotate(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum,System.Double,System.Object@)">
+      <summary>Rotates a raster around a point by a specified angle.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Shift(ESRI.ArcGIS.Geodatabase.IGeoDataset,System.Double,System.Double,System.Object@)">
+      <summary>Shifts the coordinates of a raster.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.GeoAnalyst.ITransformationOp.Warp(ESRI.ArcGIS.Geodatabase.IGeoDataset,ESRI.ArcGIS.Geometry.IPointCollection,ESRI.ArcGIS.Geometry.IPointCollection,ESRI.ArcGIS.DataSourcesRaster.esriGeoTransTypeEnum,ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum)">
+      <summary>Transforms a raster along a set of links using a polynomial transformation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.FeatureClassDescriptor">
+      <summary>GeoAnalyst FeatureClass descriptor object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.FeatureClassDescriptorClass">
+      <summary>GeoAnalyst FeatureClass descriptor object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisAspectMethodEnum">
+      <summary>Aspect Methods in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisAspectMethodEnum.esriGeoAnalysisAspectPlanar">
+      <summary>Aspect is computed in planar method.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisAspectMethodEnum.esriGeoAnalysisAspectGeodesic">
+      <summary>Aspect is computed in geodesic method.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisEnforceEnum">
+      <summary>Enforce Options in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisEnforceEnum.esriGeoAnalysisEnforceOff">
+      <summary>Drainage enforcement is off.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisEnforceEnum.esriGeoAnalysisEnforceOn">
+      <summary>Drainage enforcement is on.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisEnforceEnum.esriGeoAnalysisEnforceOnWithSink">
+      <summary>Drainage enforcement is on with sink diagnostics.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisFilterEnum">
+      <summary>Filter Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisFilterEnum.esriGeoAnalysisFilter3x3LowPass">
+      <summary>Low Pass Filter.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisFilterEnum.esriGeoAnalysisFilter3x3HighPass">
+      <summary>High Pass Filter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum">
+      <summary>Resampling Types in Spatial Analyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum.esriGeoAnalysisResampleNearest">
+      <summary>Nearest neighbor assignment.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum.esriGeoAnalysisResampleBilinear">
+      <summary>Bilinear interpolation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum.esriGeoAnalysisResampleCubic">
+      <summary>Cubic convolution.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisResampleEnum.esriGeoAnalysisResampleSearch">
+      <summary>Extended nearest neighbor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum">
+      <summary>Semi-Variogram types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisNoneVariogram">
+      <summary>Undefined semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisSphericalSemiVariogram">
+      <summary>Spherical semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisCircularSemiVariogram">
+      <summary>Circular semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisExponentialSemiVariogram">
+      <summary>Exponential semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisGaussianSemiVariogram">
+      <summary>Gaussian semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisLinearSemiVariogram">
+      <summary>Linear semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisUniversal1SemiVariogram">
+      <summary>Type-1 Universal semi-variogram model.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSemiVariogramEnum.esriGeoAnalysisUniversal2SemiVariogram">
+      <summary>Type-2 Universal semi-variogram model.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum">
+      <summary>Slice Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum.esriGeoAnalysisSliceEqualInterval">
+      <summary>Equal Interval Slice.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum.esriGeoAnalysisSliceEqualArea">
+      <summary>Equal Area Slice.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum.esriGeoAnalysisSliceNatualBreaks">
+      <summary>Natural Breaks Slice.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSliceEnum.esriGeoAnalysisSliceStandardDeviation">
+      <summary>Standard Deviation Slice.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum">
+      <summary>Slope Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum.esriGeoAnalysisSlopeDegrees">
+      <summary>Slope is recorded in degrees.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeEnum.esriGeoAnalysisSlopePercentrise">
+      <summary>Slope is recorded in percentage of rise.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeMethodEnum">
+      <summary>Slope Methods in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeMethodEnum.esriGeoAnalysisSlopePlanar">
+      <summary>Slope is computed in planar method.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSlopeMethodEnum.esriGeoAnalysisSlopeGeodesic">
+      <summary>Slope is computed in geodesic method.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum">
+      <summary>Spline Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum.esriGeoAnalysisTensionSpline">
+      <summary>Tension.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisSplineEnum.esriGeoAnalysisRegularizedSpline">
+      <summary>Regularized.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum">
+      <summary>Statistics types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMajority">
+      <summary>Majority.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMaximum">
+      <summary>Maximum.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMean">
+      <summary>Mean.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMedian">
+      <summary>Median.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMinimum">
+      <summary>Minimum.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsMinority">
+      <summary>Minority.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsRange">
+      <summary>Range.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsStd">
+      <summary>Standard Deviation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsSum">
+      <summary>Sum.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsVariety">
+      <summary>Variety.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisStatisticsEnum.esriGeoAnalysisStatsLength">
+      <summary>Length.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum">
+      <summary>Trend Surface Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum.esriGeoAnalysisLinearTrend">
+      <summary>Linear.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisTrendEnum.esriGeoAnalysisLogisticTrend">
+      <summary>Logistic.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum">
+      <summary>Units Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum.esriUnitsMap">
+      <summary>Measurements in Map Units.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisUnitsEnum.esriUnitsCells">
+      <summary>Measurements in number of cells.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum">
+      <summary>Visibility Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum.esriGeoAnalysisVisibilityFrequency">
+      <summary>Record number of times each cell can be seen.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum.esriGeoAnalysisVisibilityObservers">
+      <summary>Record which observers can be seen.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum.esriGeoAnalysisVisibilityFrequencyUseCurvature">
+      <summary>Indicate if earth curvature corrections are to be used with frequency.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriGeoAnalysisVisibilityEnum.esriGeoAnalysisVisibilityObserversUseCurvature">
+      <summary>Indicate if earth curvature corrections are to be used with observers.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum">
+      <summary>Raster analysis environment types for extent and cell size.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum.esriRasterEnvMaxOf">
+      <summary>The maximum of all input Raster bands for the specified property is used.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum.esriRasterEnvMinOf">
+      <summary>The minimum of all input raster bands for the specified property is used.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum.esriRasterEnvValue">
+      <summary>The specified value for the specified property is used.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum2">
+      <summary>Raster analysis environment types for extent and cell size, including default value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum2.esriRasterEnvMaxOf_">
+      <summary>The maximum of all input Raster bands for the specified property is used.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum2.esriRasterEnvMinOf_">
+      <summary>The minimum of all input raster bands for the specified property is used.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum2.esriRasterEnvValue_">
+      <summary>The specified value for the specified property is used.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterEnvSettingEnum2.esriRasterEnvDefault_">
+      <summary>the default value for the tool is used, whatever that is</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum">
+      <summary>Raster GeoDatabase compression types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionNone">
+      <summary>No compression to GeoDatabase raster data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionLZ77">
+      <summary>Compress GeoDatabase raster data using LZ77.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionJPEG">
+      <summary>Compress GeoDatabase raster data using JPEG.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionJPEG2000">
+      <summary>Compress GeoDatabase raster data using JPEG2000.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionPackBits">
+      <summary>Compress GeoDatabase raster data using PackBits.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionLZW">
+      <summary>Compress GeoDatabase raster data using LZW.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionRLE">
+      <summary>Compress GeoDatabase raster data using Run-Length Encoding (Esri).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionCCITTG3">
+      <summary>Compress GeoDatabase raster data using CCITT Group 3.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionCCITTG4">
+      <summary>Compress GeoDatabase raster data using CCITT Group 4.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionCCITTRLE">
+      <summary>Compress GeoDatabase raster data using CCITT RLE.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionJPEGYCbCr">
+      <summary>Compress GeoDatabase raster data using YCbCr.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterGDBCompressionEnum.esriRasterGDBCompressionLERC">
+      <summary>Compress GeoDatabase raster data using LERC.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum">
+      <summary>Raster Neighborhood Types in GeoAnalyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriRectangleNeighborhood">
+      <summary>Rectangle.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriCircleNeighborhood">
+      <summary>Circle.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriAnnulusNeighborhood">
+      <summary>Annulus.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriWedgeNeighborhood">
+      <summary>Wedge.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriIrregularNeighborhood">
+      <summary>Irregular.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriWeightNeighborhood">
+      <summary>Weight.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriLowPassFilterNeighborhood">
+      <summary>Low-Pass Filter.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterNeighborhoodEnum.esriHighPassFilterNeighborhood">
+      <summary>High-Pass Filter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriRasterVerifyEnum">
+      <summary>Verification types of the Raster environment.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterVerifyEnum.esriRasterVerifyOff">
+      <summary>The verification is off: overrides the existing output.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterVerifyEnum.esriRasterVerifyOn">
+      <summary>The verification is on: prompts users to override the existing output.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriRasterVerifyEnum.esriRasterVerifyError">
+      <summary>The verification is in error mode: produce error when the output already exists.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError">
+      <summary>Error codes for the Spatial Analyst.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_UNKNOWN_ERROR">
+      <summary>Unknown error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FILE_NOT_FOUND">
+      <summary>File cannot be found.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FILE_INVALID_EXTENSION">
+      <summary>Invalid file extension.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_RENDERER_INVALID_BAND_INDEX">
+      <summary>Specified band index is invalid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FILE_FAILED_TO_RENAME">
+      <summary>Failed to rename the specified file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FILE_FAILED_TO_COPY">
+      <summary>Failed to copy the specified file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_ARGTYPE">
+      <summary>Invalid argument type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_GRIDORNUMB">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_OBJTYPE">
+      <summary>Invalid object type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_ZONEOBJ">
+      <summary>Invalid zone object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_SORTTYPE">
+      <summary>Invalid sorting type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_SHAPETYPE">
+      <summary>Invalid shape type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_SLICETYPE">
+      <summary>Invalid slice type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_FIELDTYPE">
+      <summary>Invalid field type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_NOTVALUEFD">
+      <summary>The input field is not a VALUE field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_NOVAT">
+      <summary>Unable to find grid VAT table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_BADSTA">
+      <summary>Bad grid STA table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_READTABLE">
+      <summary>Error in reading the table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_READSTA">
+      <summary>Error in reading grid STA table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_READVAT">
+      <summary>Error in reading VAT table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_READVTAB">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_ALLOCMEM">
+      <summary>Unable to allocate memory.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_ALLOCLUT">
+      <summary>Unable to allocate memory for a lookup table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_CELLSIZE">
+      <summary>Undefined or Invalid cell size.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_CSIZETYPE">
+      <summary>Invalid cell-size environmental type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_LUTRANGE">
+      <summary>Invalid range for the input lookup table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_MAKEHASH">
+      <summary>Error in making hash table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_MAKEVTAB">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_LISTELEM">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_STRGRID">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_LEGCLASS">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_INFODIR">
+      <summary>Unable to create INFo directory.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_SEMIVARIO">
+      <summary>Error in making semivariogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_CONTINUE">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_TIMEOUT">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_HASERR">
+      <summary>The grid has error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_LOADFAIL">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_NOLIBINIT">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_NOLIBEXIT">
+      <summary>Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_NOIRREGNBR">
+      <summary>Irregular neighborhood is not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.GRID_ERR_MISMATCHSPREF">
+      <summary>Spatial References do not match.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TREND_FIELD">
+      <summary>Invalid field values for Logistic Trend.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CONVERSION">
+      <summary>Conversion error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OPEN_WORKSPACE">
+      <summary>Could not open workspace.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_FEATURE_CLASS">
+      <summary>Could not get feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_FIELD_NAME">
+      <summary>Could not get field name.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_EVAL_TYPE">
+      <summary>Wrong type of evaluation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_POINTS">
+      <summary>No points for selection.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_RECLASS_FIELD">
+      <summary>Invalid field type for reclass.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FILE_FAILED_TO_WRITE">
+      <summary>Failed to open the specified file for write.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_READ_INDEX">
+      <summary>Record has invalid index for read.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_DELETE_INDEX">
+      <summary>Record has invalid index for deletion.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TABLE_NOT_CREATED">
+      <summary>Unable to create output table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_DUPLICATES">
+      <summary>Unable to add duplicate record.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_CONVERTTOCOVERAGE">
+      <summary>Unable to convert to coverage.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NOT_FEATURE_CLASS">
+      <summary>Not feature class data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NULL_OBJECT">
+      <summary>Null object.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_RECLASS_BY_SELECT">
+      <summary>Could not reclass on selection set.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FEAT_SEARCH_CURSOR">
+      <summary>Could not get search cursor on feature.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_EXTRACT_VARARR">
+      <summary>Could not convert variant array to long.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_UNBIND_RASTER">
+      <summary>Unable to unbind raster.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_UNARY_OPERATION">
+      <summary>Unary operation failed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_BINARY_OPERATION">
+      <summary>Binary operation failed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_FILTER_TYPE">
+      <summary>Invalid filter type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_STRING_FIELD_NOT_ALLOWED">
+      <summary>String field not allowed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_BAD_FIELD_INDEX">
+      <summary>The field index is invalid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_GEOMETRY">
+      <summary>Not supported geometry.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OPEN_RDS_FAIL">
+      <summary>Unable to open raster dataset.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REFERENCE_FAILED">
+      <summary>Could not reference grid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CREATE_WORKSPACENAME">
+      <summary>Could not create workspace name.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_STRING_FIELD">
+      <summary>No string field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_MIXED_FILE">
+      <summary>Mixed remap records.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_BAD_SVALUE">
+      <summary>Invalid single value remap record.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_FILL_SREMAP">
+      <summary>Could not populate string remap.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_NEED_STYPE">
+      <summary>String remap type needed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_NEED_NTYPE">
+      <summary>Number remap type needed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_INVALID_FIND_INDEX">
+      <summary>Unable to find record by index.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_RECORD_NOT_FOUND">
+      <summary>Unable to find record.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_OVERLAP_CONFLICT">
+      <summary>Overlap conflict.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_SIMPLE_CONFLICT">
+      <summary>Simple conflict (different output classes for same input).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_DUPLICATE_RECORD">
+      <summary>Duplicate remap record.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_FREE_RECORDS">
+      <summary>Unable to free remap objects.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_NAME_FROM_PATH">
+      <summary>Invalid name obtained from path.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OUTPUT_EXISTS">
+      <summary>Output file exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SAVEAS">
+      <summary>Could not save dataset as specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_SPREF">
+      <summary>Could not get spatial reference.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_EXTENT">
+      <summary>Could not get extent.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_EVALEXP">
+      <summary>No valid evaluation expression.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NOT_EVALUATED">
+      <summary>No valid evaluation expression.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_ADDITEM_FAILED">
+      <summary>Unable to add item to table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_DATASET">
+      <summary>Could not get dataset.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SAVEAS_FAILED">
+      <summary>Error while performing a SaveAs.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NOT_INTEGER">
+      <summary>Input dataset is not integer.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_POINT_FILE">
+      <summary>Unable to open point file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CREATE_GRID">
+      <summary>Unable to create grid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_ANALYSIS_WINDOW">
+      <summary>Could not set analysis window.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INIT_SAMPLE_LIST">
+      <summary>Unable to initialize sample list.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_ESTIMATE_SEMIVAR">
+      <summary>Unable to estimate semi-variogram.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_WRITE_UNABLE">
+      <summary>Unable to write output.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_FIELD">
+      <summary>Invalid field name.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_SEMIVAR_TYPE">
+      <summary>Invalid semi-variogram type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_COMPOSE_EXPR">
+      <summary>Could not compose grid expression.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FIELD_NOT_ADDED">
+      <summary>Unable to add field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_HIST_FREQUENCY">
+      <summary>Unable to compute frequency.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_LICENSENOTAVAILABLE">
+      <summary>Spatial Analyst License not available.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_WASNOTACTIVATED">
+      <summary>Spatial Analyst Extension wasn't activated.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SHAREDLICENSENOTAVAILABLE">
+      <summary>Nor Spatial Analyst nor 3D Analyst Licenses are available.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SHAREDWASNOTACTIVATED">
+      <summary>Nor Spatial Analyst nor 3D Analyst Extensions was activated.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_EMPTY_RASTER">
+      <summary>Empty Raster - No RasterBand in it.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_BIND_SYMBOL_MISMATCH">
+      <summary>Unable to match string for binding.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NULL_FEATURE_COUNT">
+      <summary>No features found.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CANCEL_OP">
+      <summary>Operation cancelled.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NODATA_RASTER">
+      <summary>Raster has only nodata.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_STATSTYPE">
+      <summary>Invalid statistics type for the method.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_JOINEDFIELD">
+      <summary>Unable to support a joined field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_SUPPORT">
+      <summary>Operation not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_OUTRFORMAT">
+      <summary>Unsupported output raster format.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_GEODATASET">
+      <summary>Invalid input geodataset (Layer, Tin, etc.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_NAMEFORGRIDENG">
+      <summary>Invalid output name for grid, stack or shapefile (space in the base name).</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_BASETABLE">
+      <summary>Could not get base table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_RECS_WITH_QFILTER">
+      <summary>No records found with specified query filter.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_COMMAND">
+      <summary>Invalid grid command or expression.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_UNSUPPORTED_FEAT_INPUT">
+      <summary>Feature inputs not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_PRJS_FOR_CURVATURE">
+      <summary>Incompatible projections for curvature.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_BAND_COUNT">
+      <summary>Invalid band count.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_FILE_NAME">
+      <summary>File name not provided.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OUT_FILE_EXISTS">
+      <summary>Output file exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_REJECT_FRACTION">
+      <summary>Invalid rejection fraction.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_COMPONENT_COUNT">
+      <summary>Invalid principal component count.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SREMAP_NO_STRING_FIELD">
+      <summary>String remap has no string field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NREMAP_HAS_STRING_FIELD">
+      <summary>Number remap has string field.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_REMAP_UNSORTED">
+      <summary>Unsorted remap values.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_NOT_POSITIVE">
+      <summary>Not a positive value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_NOT_NONNEGATIVE">
+      <summary>Not a non-negative value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_UNKNOWN_KEYWORD">
+      <summary>Unknown keyword.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_BAD_CONTOUR_OPTION">
+      <summary>Bad contour option.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_NO_ELEVDATA">
+      <summary>Not a point elevation data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_MISS_VALUE">
+      <summary>Missing a value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_INVALID_ZLIMITS">
+      <summary>Invalid z limit.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NOT_GRID">
+      <summary>Not an Esri Grid.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OBSV_UNSUPPORTED_GEOMETRY">
+      <summary>This geometry is not supported for the 'observers' option.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_OBSV_EXCESS_POINTS">
+      <summary>Too many points. Maximum number allowed is 16.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_FIELD_EXISTS">
+      <summary>Field already exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_COVERAGE_SUPPORT">
+      <summary>Coverage inputs/outputs are not supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_RESERVED_FIELD_EXISTS">
+      <summary>Reserved field name found in attribute table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SIMPLE_POLY_SUPPORT">
+      <summary>Only simple polygon geometry is supported.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_HDR_FILE_NOT_FOUND">
+      <summary>Associated header file not found.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_READ_ERROR">
+      <summary>Error encountered during read.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_CONTOUR_TOOMANY_POINTS">
+      <summary>Too many points in a contour polyline.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_STREAM_TOOMANY_POINTS">
+      <summary>Too many points in a stream polyline.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_BOUND_TOOMANY_POINTS">
+      <summary>Too many points in a boundary polygon.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_TOPO_LAKE_TOOMANY_POINTS">
+      <summary>Too many points in a lake polygon.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_GRID_EXECUTE">
+      <summary>xxx.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_SYNTAX_ERROR">
+      <summary>xxx.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_MEMORY_ALLOC">
+      <summary>xxx.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_PRJ_NOTMACTH">
+      <summary>xxx.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_PRJ_COPY">
+      <summary>xxx.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_NO_ATTRIB_TABLE">
+      <summary>???.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_OUTPUT_EXTENT">
+      <summary>Empty output extent, or extent cannot be projected to output sr.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_EXPRESSION_TOO_LONG">
+      <summary>Evaluation expression is longer than 4096 characters. Output will not be created.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_INVALID_NUMERIC_FIELD_LEN">
+      <summary>Numeric field lengths must be less than or equal to 19.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_LOCALFUNCTION_ARGUMENTS_OVERSPECIFIED">
+      <summary>The rasters and raster(2) properties were both specified.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CANNOT_OBTAIN_STATS">
+      <summary>cannot obtain statistics for raster.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CANNOT_SAVE_REMAP">
+      <summary>cannot save remap table.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_DISTRIBUTED_ZONALSTATS_PARTIALSTATS_FAILURE">
+      <summary>Failure when computing partial zonal statistics on server cluster.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_DISTRIBUTED_ZONALSTATS_DISTRIBUTEDWRITE_FAILURE">
+      <summary>Failure when issuing distributed write request to serevr cluster.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.S_SPATIAL_ANALYST_TOO_MANY_UNIQUE_VALUES">
+      <summary>Too many unique values for raster attribute tables.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_DISTANCE_MAPPING_INTERNAL_ERROR">
+      <summary>Internal error in cost/path distance mapping operation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_COST_PATH_INTERNAL_ERROR">
+      <summary>Internal error in cost path operation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_UNEXPECTED_NULL_FIELD_VALUE">
+      <summary>unexpected null field value.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_COST_CONNECTIVITY_ALL_UNCONNECTED_REGIONS">
+      <summary>Must be at least two input regions.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_COST_CONNECTIVITY_SOME_UNCONNECTED_REGIONS">
+      <summary>Unconnected input regions.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.GeoAnalyst.esriSpatialAnalystError.E_SPATIAL_ANALYST_CANNOT_CREATE_REMAP">
+      <summary>cannot create remap object (possibly unable to read a pixel block from a raster data source).</summary>
+    </member>
+  </members>
+</doc>

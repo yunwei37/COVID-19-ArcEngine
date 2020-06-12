@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.DataSourcesFile</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem">
+      <summary>Provides access to members that retrieve ArcInfo Item information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.AlternateName">
+      <summary>Alternate Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.IsIndexed">
+      <summary>Indicates if the Item is Indexed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.IsPseudo">
+      <summary>Indicates if the Item is a Pseudo Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.IsRedefined">
+      <summary>Indicates if the Item is a Redefined Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.Name">
+      <summary>Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.NumberDecimals">
+      <summary>Number of Decimals for Item values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.OutputWidth">
+      <summary>Output Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.StartPosition">
+      <summary>Start Position of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.Type">
+      <summary>Type of the Item, as an enumeration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItem.Width">
+      <summary>Storage Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit">
+      <summary>Provides access to members that control ArcInfo Item Editing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.AlternateName">
+      <summary>Alternate Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsIndexed">
+      <summary>Indicates if the Item is Indexed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsPseudo">
+      <summary>Indicates if the Item is a Pseudo Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsRedefined">
+      <summary>Indicates if the Item is Redefined.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Name">
+      <summary>Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.NumberDecimals">
+      <summary>Number of Decimals for Item values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.OutputWidth">
+      <summary>Output Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.StartPosition">
+      <summary>Start Position of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Type">
+      <summary>Type of the Item, as an enumeration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Width">
+      <summary>Storage Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.AlternateName">
+      <summary>Alternate Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsIndexed">
+      <summary>Indicates if the Item is Indexed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsPseudo">
+      <summary>Indicates if the Item is a Pseudo Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.IsRedefined">
+      <summary>Indicates if the Item is a Redefined Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Name">
+      <summary>Name of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.NumberDecimals">
+      <summary>Number of Decimals for Item values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.OutputWidth">
+      <summary>Output Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.StartPosition">
+      <summary>Start Position of the Item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Type">
+      <summary>Type of the Item, as an enumeration.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemEdit.Width">
+      <summary>Storage Width, in Bytes, for values stored in the Item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoItems">
+      <summary>Provides access to members that retrieve ArcInfo Items Collection information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoItems.FindItem(System.String,System.Int32@)">
+      <summary>Finds the index of the specified Item in the Items Collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItems.Item(System.Int32)">
+      <summary>Item at the specified index in the Items Collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItems.ItemCount">
+      <summary>Number of Items in the Items Collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit">
+      <summary>Provides access to members that create the ArcInfo Items Collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit.Item(System.Int32)">
+      <summary>Item at the specified position.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit.ItemCount">
+      <summary>Number of Items in this Item Collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit.FindItem(System.String,System.Int32@)">
+      <summary>Finds the index of the specified Item in the Items Collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit.Item(System.Int32)">
+      <summary>Item at the specified index in the Items Collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoItemsEdit.ItemCount">
+      <summary>Number of Items in the Items Collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable">
+      <summary>Provides access to members that modify ArcInfo Tables.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.AddIndex(System.String)">
+      <summary>Adds an Index for the specified Item.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.AddItem(ESRI.ArcGIS.DataSourcesFile.IArcInfoItem,System.String)">
+      <summary>Adds an Item to this Table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.AlterItem(System.String,ESRI.ArcGIS.DataSourcesFile.IArcInfoItem)">
+      <summary>Changes the properties of the specified Item.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.DeleteIndex(System.String)">
+      <summary>Deletes an Index from the specified Item.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.DeleteItem(System.String)">
+      <summary>Deletes an Item from this Table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.FindItem(System.String)">
+      <summary>Index of the Item with the specified name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable.ItemSet">
+      <summary>Item Collection for this Feature Class or Info Table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable2">
+      <summary>Provides access to members that modify ArcInfo Tables.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoTable2.External(System.String)">
+      <summary>Assigns external name to an ArcInfo table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoWorkspace">
+      <summary>Provides access to members that create ArcInfo Coverages and Tables.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoWorkspace.CreateCoverage(System.String,System.String,ESRI.ArcGIS.DataSourcesFile.esriCoveragePrecisionType)">
+      <summary>Creates a new Coverage.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoWorkspace.CreateInfoTable(System.String,ESRI.ArcGIS.DataSourcesFile.IArcInfoItems)">
+      <summary>Creates a new Info Table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IArcInfoWorkspaceUtil">
+      <summary>Provides access to members that retreives ArcInfo Info Table information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IArcInfoWorkspaceUtil.GetInfoTableName(System.String)">
+      <summary>Maps a prefix to a table name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset">
+      <summary>Provides access to members that control the Cad Drawing Dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.Exists">
+      <summary>Indicates whether Cad Dataset exists.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.FilePath">
+      <summary>The Full PathName of the Cad File.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.Is2d">
+      <summary>Indicates whether Cad Dataset is 2d.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.Is3d">
+      <summary>Indicates whether Cad Dataset is 3d.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.IsAutoCad">
+      <summary>Indicates whether Cad Dataset is an AutoCad file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingDataset.IsDgn">
+      <summary>Indicates whether Cad Dataset is an Microstation file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICadDrawingLayers">
+      <summary>Provides access to properties that give information on the layers in the CAD drawing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingLayers.DrawingLayerCount">
+      <summary>The number of layers in the CAD drawing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingLayers.DrawingLayerName(System.Int32)">
+      <summary>The name of the CAD drawing layer at the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingLayers.DrawingLayerVisible(System.Int32)">
+      <summary>Indicates if the specified CAD drawing layer visible in the CAD layer in ArcMap.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadDrawingLayers.OriginalDrawingLayerVisible(System.Int32)">
+      <summary>Indicates if the specified CAD drawing layer visible in the CAD drawing itself.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICadDrawingWorkspace">
+      <summary>Provides access to members that control the Cad Drawing Workspace.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICadDrawingWorkspace.OpenCadDrawingDataset(System.String)">
+      <summary>Open a Cad Drawing Dataset.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICadSettings">
+      <summary>Provides access to members that control the use of Dgn files with any file extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadSettings.EnableAllDgnFileExtensions">
+      <summary>Indicates whether the use of Dgn files with any file extension is enabled.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICadTransformations">
+      <summary>Provides access to members that control Cad Transformations.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.EnableTransformations">
+      <summary>Indicates if global transformations are enabled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.GetFromToTransform(ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Returns the points of a two point transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.GetTransformation(ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,System.Double@,System.Double@)">
+      <summary>Returns the rotation, scale, and translation of a transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.SetFromToTransform(ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Sets the points of a two point transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.SetTransformation(ESRI.ArcGIS.esriSystem._WKSPoint@,ESRI.ArcGIS.esriSystem._WKSPoint@,System.Double,System.Double)">
+      <summary>Sets the rotation, scale, and translation of a transformation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.TransformMode">
+      <summary>The transformation type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICadTransformations.WorldFileName">
+      <summary>The pathname of the world file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverage">
+      <summary>Provides access to members that modifies ArcInfo Coverages.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage.Build(ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType,System.String)">
+      <summary>Performs a BUILD operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage.Clean(System.Double,System.Double,ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType)">
+      <summary>Performs a CLEAN operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage.CreateFeatureClass(ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType,System.String)">
+      <summary>Creates an empty Feature Class in the Coverage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverage.Tolerance(ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType)">
+      <summary>Value of the specified Tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverage.ToleranceStatus(ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType)">
+      <summary>Indicates if the specified Tolerance has been verified.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverage2">
+      <summary>Provides access to members that modifies ArcInfo Coverages.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverage2.Extent">
+      <summary>The BND file of the Coverage.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage2.RefreshSpatialProperties">
+      <summary>Refreshes the Extent and Spatial Reference properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage2.Build(ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType,System.String)">
+      <summary>Performs a BUILD operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage2.Clean(System.Double,System.Double,ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType)">
+      <summary>Performs a CLEAN operation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverage2.CreateFeatureClass(ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType,System.String)">
+      <summary>Creates an empty Feature Class in the Coverage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverage2.Tolerance(ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType)">
+      <summary>Value of the specified Tolerance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverage2.ToleranceStatus(ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType)">
+      <summary>Indicates if the specified Tolerance has been verified.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass">
+      <summary>Provides access to members that retrieve ArcInfo Coverage Feature Class information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass.FeatureClassType">
+      <summary>Type of the Feature Class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass.HasFAT">
+      <summary>Indicates if the Feature Class has a Feature Attribute Table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass.Topology">
+      <summary>Topology of the Feature Class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass2">
+      <summary>Provides access to members that retrieve ArcInfo Coverage Feature Class information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass2.Copy(System.String,ESRI.ArcGIS.Geodatabase.IFeatureDataset)">
+      <summary>Copies this Feature Class to another coverage using the specified name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass2.FeatureClassType">
+      <summary>Type of the Feature Class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass2.HasFAT">
+      <summary>Indicates if the Feature Class has a Feature Attribute Table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass2.Topology">
+      <summary>Topology of the Feature Class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClassName">
+      <summary>Provides access to members that maintains ArcInfo Coverage Feature Class information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClassName.FeatureClassType">
+      <summary>Type of the Feature Class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClassName.HasFAT">
+      <summary>Indicates if the Feature Class has a Feature Attribute Table.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClassName.Topology">
+      <summary>Topology of the Feature Class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ICoverageName">
+      <summary>Provides access to members that maintains ArcInfo Coverage Feature Dataset Information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ICoverageName.CoverageType">
+      <summary>Type of the Coverage.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo">
+      <summary>Provides access to data license information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.ApplicationName(System.Int32)">
+      <summary>Name of licensed applications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.ApplicationsCount">
+      <summary>Number of licensed applications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.AttrCroupsCount">
+      <summary>Number of attribute groups.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.AttrGroupName(System.Int32)">
+      <summary>Name of attribute group.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.AvailableConnections">
+      <summary>Available connections.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.DataProductName">
+      <summary>Name of data product.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.Expiration">
+      <summary>Expiration date.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.GeographiesCount">
+      <summary>Number of geographies divisions</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.GeographyName(System.Int32)">
+      <summary>Name of geographies divisions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.LayerCroupsCount">
+      <summary>Number of layer groups.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.LayerGroupName(System.Int32)">
+      <summary>Name of layer groups.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.LicenseID">
+      <summary>License ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.LicenseType">
+      <summary>License type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.MaxConnections">
+      <summary>Maximum connections allowed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.MetaCount">
+      <summary>Number of meta information strings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.MetaInfo(System.Int32)">
+      <summary>Meta information pair.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.UsageMode(System.Int32)">
+      <summary>Usage mode by its number.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseInfo.UsageModeCount">
+      <summary>Number of usage modes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager">
+      <summary>Provides access to data license manager.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager.AddLicenseFromFile(System.String)">
+      <summary>Adds license information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager.Count">
+      <summary>Number of license information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager.GetLicenseInfo(System.Int32)">
+      <summary>Returns license information by index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager.GetLicenseInfoFromFile(System.String)">
+      <summary>Returns license information by file name.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDataLicenseManager.RemoveLicense(System.Int32)">
+      <summary>Removes license information.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoTable">
+      <summary>Provides access to the ArcInfo Table Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoTable.ItemSet">
+      <summary>The list of items.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoTableType">
+      <summary>Indicator interface for the ArcInfo Table Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities">
+      <summary>Provides access to the ArcInfo Data Element Utilities.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.AssignArcInfoTableProperties(ESRI.ArcGIS.DataSourcesFile.IArcInfoTable,ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Assign ArcInfo table properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.AssignCoverageFeatureClassNameProperties(ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClassName,ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Assign coverage feature class name properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.AssignCoverageFeatureClassProperties(ESRI.ArcGIS.DataSourcesFile.ICoverageFeatureClass,ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Assign coverage feature class properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.AssignCoverageProperties(ESRI.ArcGIS.DataSourcesFile.ICoverage,ESRI.ArcGIS.Geodatabase.IDataElement)">
+      <summary>Assign coverage properties.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.FindItem(ESRI.ArcGIS.DataSourcesFile.IDEArcInfoTable,System.String)">
+      <summary>FindItem.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetCoverageFeatureClassTypeDescription(ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType)">
+      <summary>Get coverage feature class type description.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetCoverageFeatureClassTypeFromString(System.String)">
+      <summary>Get coverage feature class type from string.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetFeatureClassTopologyDescription(ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology)">
+      <summary>Get feature class topology description.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetFeatureClassTopologyFromString(System.String)">
+      <summary>Get feature class topology from string.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetItemTypeDescription(ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType)">
+      <summary>Get item type description.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.GetItemTypeFromString(System.String)">
+      <summary>Get item type from string.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.ItemExists(ESRI.ArcGIS.DataSourcesFile.IDEArcInfoTable,ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem)">
+      <summary>Item exists.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.MakeDETolerances(ESRI.ArcGIS.DataSourcesFile.ICoverage)">
+      <summary>Make tolerances.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.MakeGPItem(ESRI.ArcGIS.DataSourcesFile.IArcInfoItem)">
+      <summary>Make item.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IDEArcInfoUtilities.MakeGPItems(ESRI.ArcGIS.DataSourcesFile.IArcInfoItems)">
+      <summary>Make Items.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDataset">
+      <summary>Provides access to the CadDrawingDataset Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDataset.Is2d">
+      <summary>Indicates whether Cad Dataset is 2d.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDataset.Is3d">
+      <summary>Indicates whether Cad Dataset is 3d.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDataset.IsAutoCad">
+      <summary>Indicates whether Cad Dataset is an AutoCad file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDataset.IsDgn">
+      <summary>Indicates whether Cad Dataset is an Microstation file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECadDrawingDatasetType">
+      <summary>Provides access to the CadDrawing Dataset Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECatalogRoot">
+      <summary>Provides access to the Catalog Root Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECatalogRootType">
+      <summary>Provides access to the CatalogRoot Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECoverage">
+      <summary>Provides access to the Coverage Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECoverage.Tolerances">
+      <summary>The tolerances of the coverage.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECoverageFeatureClass">
+      <summary>Provides access to the Coverage Feature Class Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECoverageFeatureClass.FeatureClassType">
+      <summary>The coverage feature class type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECoverageFeatureClass.HasFAT">
+      <summary>Indicates if the coverage feature class have attributes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDECoverageFeatureClass.Topology">
+      <summary>Coverage feature class topology status.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECoverageFeatureClassType">
+      <summary>Indicator interface for the CoverageFeatureClass Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDECoverageType">
+      <summary>Indicator interface for the Coverage Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEDbaseTable">
+      <summary>Provides access to the Dbase Table Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEDbaseTableType">
+      <summary>Provides access to the Dbase Table Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEDiskConnection">
+      <summary>Provides access to the Disk Connection Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEDiskConnectionType">
+      <summary>Provides access to the Disk Connection Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEFile">
+      <summary>Provides access to the File Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEFileType">
+      <summary>Provides access to the File Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEFolder">
+      <summary>Provides access to the Folder Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEFolderType">
+      <summary>Provides access to the Folder Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDELasDataset">
+      <summary>Provides access to the LAS Dataset Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.FileCount">
+      <summary>The number of files in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.HasStatistics">
+      <summary>Indicates whether there are statistics.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.NeedsUpdateStatistics">
+      <summary>Indicates whether the statistics are up to date.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.PointCount">
+      <summary>The number of points in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.SurfaceConstraintCount">
+      <summary>The number of surface constraint feature classes in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset.UsesRelativePath">
+      <summary>Indicates whether the LAS dataset uses a relative path to its files.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2">
+      <summary>Provides access to the LAS Dataset Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.PointSpacing">
+      <summary>The estimated point spacing in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.FileCount">
+      <summary>The number of files in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.HasStatistics">
+      <summary>Indicates whether there are statistics.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.NeedsUpdateStatistics">
+      <summary>Indicates whether the statistics are up to date.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.PointCount">
+      <summary>The number of points in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.SurfaceConstraintCount">
+      <summary>The number of surface constraint feature classes in the LAS dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELasDataset2.UsesRelativePath">
+      <summary>Indicates whether the LAS dataset uses a relative path to its files.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDELasDatasetType">
+      <summary>Provides access to the LAS Dataset Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDELayer">
+      <summary>Provides access to the Layer Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDELayer.GPLayer">
+      <summary>The data element layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDELayerType">
+      <summary>Provides access to the Layer Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEMapDocument">
+      <summary>Provides access to the MapDocument Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEMapDocumentType">
+      <summary>Provides access to the MapDocument Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEPrjFile">
+      <summary>Provides access to the Projection File Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDEPrjFile.SpatialReference">
+      <summary>SpatialReference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEPrjFileType">
+      <summary>Provides access to the Projection File Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDERemoteDatabaseFolder">
+      <summary>Provides access to the Remote Database Folder Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDERemoteDatabaseFolderType">
+      <summary>Provides access to the Remote Database Folder Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEShapeFile">
+      <summary>Provides access to the ShapeFile Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEShapeFileType">
+      <summary>Provides access to the ShapeFile Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDESpatialReferencesFolder">
+      <summary>Provides access to the Spatial References Folder Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDESpatialReferencesFolderType">
+      <summary>Provides access to the Spatial References Folder Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDETextFile">
+      <summary>Provides access to the TextFile Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDETextFileType">
+      <summary>Provides access to the TextFile Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDETin">
+      <summary>Provides access to the TIN Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.Fields">
+      <summary>The list of Fields.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.HasEdgeTagValues">
+      <summary>Indicates if the TIN dataset has edge tag values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.HasNodeTagValues">
+      <summary>Indicates if the TIN dataset has node tag values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.HasTriangleTagValues">
+      <summary>Indicates if the TIN dataset has triangle tag values.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.IsDelaunay">
+      <summary>Indicates if TIN was constructed using Delaunay triangulation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IDETin.ZFactor">
+      <summary>Multiplication factor applied to all z values in a TIN to provide unit-congruency between coordinate components.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDETinType">
+      <summary>Provides access to the Tin Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEVPFCoverage">
+      <summary>Provides access to the DEVPFCoverage Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEVPFCoverageType">
+      <summary>Provides access to the DEVPFCoverage Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEVPFTable">
+      <summary>Provides access to the VPFTable Data Element.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IDEVPFTableType">
+      <summary>Provides access to the VPFTable Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem">
+      <summary>Provides access to the ArcInfo Item Data Element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.AlternateName">
+      <summary>The alternate name of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.IsIndexed">
+      <summary>Indicates if the info item has an index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.IsPseudo">
+      <summary>Indicates if the item a psuedo item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.IsRedefined">
+      <summary>Indicates if the info item redefined.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.Name">
+      <summary>The name of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.NumberDecimals">
+      <summary>The number of decimal places of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.OutputWidth">
+      <summary>The output width of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.StartPosition">
+      <summary>The start position of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.Type">
+      <summary>The type of the info item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItem.Width">
+      <summary>The width of the info item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IGPArcInfoItemType">
+      <summary>Indicator interface for the ArcInfoItem Data Element Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IGPLayer">
+      <summary>Provides access to the GP Layer Type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPLayer.AreaOfInterest">
+      <summary>The default area of interest for the layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPLayer.DataElement">
+      <summary>The data element of the layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IGPLayer.NameString">
+      <summary>The name string.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IGPLayer.SetAOICoords(System.Double,System.Double,System.Double,System.Double)">
+      <summary>The set Extent of the feature layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IGPLayerType">
+      <summary>Indicator interface for a GPLayer Type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IInfoTableOnlyWorkspaceEdit">
+      <summary>Provides access to members that limit internal editing to standalone tables only.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.IInfoTableOnlyWorkspaceEdit.StartEditingTablesOnly(System.Boolean)">
+      <summary>Start editing standalone Info Tables only.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IMetaInfo">
+      <summary>Provides access to meta information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IMetaInfo.Name">
+      <summary>Meta information parameter name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IMetaInfo.Value">
+      <summary>Mata information parameter value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISdcExporter">
+      <summary>Provides access to members for compressing data to SDC.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISdcExporter.Export(ESRI.ArcGIS.Geodatabase.ICursor,System.String,System.Guid@,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Creates a SDC dataset from the input cursor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMBreakTracker">
+      <summary>Deprecated as of 10.1. Provides access to members that control the long operation cancellation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMBreakTracker.Continue">
+      <summary>Called frequently while associated operation is progressing. A return value of false indicates that the operation should stop.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMDirections">
+      <summary>Deprecated as of 10.1. Provides access to the driving directions information (path geometry and description of each path segment).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.BoundBox">
+      <summary>The geographic extent of the entire route.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.Count">
+      <summary>The total number of items in the driving directions object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.Item(System.Int32)">
+      <summary>A reference to a direction item by its position.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.TotalDrivingTime">
+      <summary>The total driving time for the route.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.TotalLength">
+      <summary>The total length of the route (in miles by default).</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.TotalsText">
+      <summary>A string containing the total time and length of the route.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirections.TotalTime">
+      <summary>The total time of the entire trip.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMDirItem">
+      <summary>Deprecated as of 10.1. Provides access to the description and geography of one item of driving directions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.Azimuth">
+      <summary>The azimuth of the direction item. Returns an esriSMAzimuthType constant.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.BoundBox">
+      <summary>The geographic extent of the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.DriveText">
+      <summary>Formatted text descrbing the length and time of the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.ItemType">
+      <summary>The type of direction item. Returns an esriSMDirItemType constant.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.Length">
+      <summary>The length of the route part, in miles by default, corresponding to the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.RoutePart">
+      <summary>The route part number associated with a direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.Shape">
+      <summary>A collection of points representing the shape of the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.StreetName">
+      <summary>The street name of the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.Text">
+      <summary>A string describing the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.Time">
+      <summary>The driving time of the route part corresponding to the direction item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMDirItem.TurnAngle">
+      <summary>The turn angle of the direction item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMFlag">
+      <summary>Deprecated as of 10.1. Provides access to the information about a stop's geographic location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMFlag.ObjectID">
+      <summary>Flag ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMFlag.PercentAlong">
+      <summary>Flag position along the street segment as a percent of the segment length.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMFlag.Side">
+      <summary>The side of the street that the flag is on. Returns an esriSMStreetSideType constant.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMFlag.StreetPoint">
+      <summary>The geographic location of the flag.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator">
+      <summary>Deprecated as of 10.1. Provides access to members for creating SMFlag objects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator.CreateFlag(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint)">
+      <summary>Creates the route flag using its geographic location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator.CreateFlagDirection(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint,System.Double,System.Double,System.Double@)">
+      <summary>Creates the route flag using its geographic location and required direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator.CreateFlagDirectionAdv(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint,System.Double,System.Double,System.Double,System.Double,System.Double@)">
+      <summary>Creates the route flag using its geographic location, required direction and latency.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator2">
+      <summary>Deprecated as of 10.1. Provides access to SMFlag search tolerance.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator2.CreateFlag(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint)">
+      <summary>Creates the route flag using its geographic location.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator2.CreateFlagDirection(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint,System.Double,System.Double,System.Double@)">
+      <summary>Creates the route flag using its geographic location and required direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator2.CreateFlagDirectionAdv(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint,System.Double,System.Double,System.Double,System.Double,System.Double@)">
+      <summary>Creates the route flag using its geographic location, required direction and latency.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMFlagCreator2.SearchTolerance">
+      <summary>Defines maximum allowed distance in miles from stop location to closest street segment when creating a flag.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute">
+      <summary>Deprecated as of 10.1. Provides access to the network attribute properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute.Name">
+      <summary>The network attribute name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute.Type">
+      <summary>The network attribute type. Returns an esriSMNetAttributeType constant.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute2">
+      <summary>Deprecated as of 10.1. Provides access to network attribute usage type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute2.Name">
+      <summary>The network attribute name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute2.Type">
+      <summary>The network attribute type. Returns an esriSMNetAttributeType constant.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttribute2.UsageType">
+      <summary>The network attribute usage type. Returns an esriSMNetAttributeUsageType constant.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetAttributesAccess">
+      <summary>Deprecated as of 10.1. Provides access to the network attribute value.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMNetAttributesAccess.GetNetAttributeValue(System.String,System.Int32)">
+      <summary>Returns the network attribute value by object ID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetAttributesCollection">
+      <summary>Deprecated as of 10.1. Provides access to the collection of network attributes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttributesCollection.Count">
+      <summary>The number of attributes in the collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetAttributesCollection.Item(System.Int32)">
+      <summary>The network attribute at a specified index in the collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetBarrier">
+      <summary>Deprecated as of 10.1. Provides access to the network barrier properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetBarrier.BarrierID">
+      <summary>The network barrier ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMNetBarrier.Point">
+      <summary>Geographic location of the barrier.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMNetBarriersCollection">
+      <summary>Deprecated as of 10.1. Provides access to the collection of network barriers.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMNetBarriersCollection.Add(ESRI.ArcGIS.DataSourcesFile.ISMNetBarrier)">
+      <summary>Adds a barrier to the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMNetBarriersCollection.Clear">
+      <summary>Removes all barriers from the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMNetBarriersCollection.Remove(System.Int32)">
+      <summary>Removes a barrier with a specified ID from the collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection">
+      <summary>Deprecated as of 10.1. Provides access to the collection of geographic points.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Add(ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint)">
+      <summary>Adds a point to the end of the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Clear">
+      <summary>Removes all points from the collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Count">
+      <summary>Number of points in the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Insert(System.Int32,ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint)">
+      <summary>Inserts a point in the collection at the specified position.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Item(System.Int32)">
+      <summary>Represents the point in the collection at the specified position.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMPointsCollection.Remove(System.Int32)">
+      <summary>Removes a point from the collection at the specified position.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRestriction">
+      <summary>Deprecated as of 10.1. Provides access to the routing restriction properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRestriction.Attribute">
+      <summary>The network attribute used as a restriction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRestriction.Param">
+      <summary>The restriction parameter value.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRestriction.Type">
+      <summary>Restriction type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRoadPreferences">
+      <summary>Deprecated as of 10.1. Provides access to preferences for different road types that the router supports.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoadPreferences.Item(ESRI.ArcGIS.DataSourcesFile.esriSMRoadType)">
+      <summary>The preference value for the specified road type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouter">
+      <summary>Deprecated as of 10.1. Provides access to the main functionality for route finding.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.Barriers">
+      <summary>The network barriers collection of the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.FlagCreator">
+      <summary>The flag creator used by the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.NetAttributeName">
+      <summary>The network attribute that the router object currently uses.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.NetAttributes">
+      <summary>The network attributes collection of the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.NetAttributesAccess">
+      <summary>The network attributes access of the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.Preferences">
+      <summary>The road preferences used by the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.ProjectionString">
+      <summary>The spatial reference of the source data used by the router object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouter.ReorderStops(ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection)">
+      <summary>Reorders the stops collection to minimize total driving time or distance.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouter.Solve(ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection,ESRI.ArcGIS.DataSourcesFile.ISMBreakTracker)">
+      <summary>Calculates the route using the current settings of the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.SpeedGroups">
+      <summary>The speed groups used by the router object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouter.TripPlanSettings">
+      <summary>The trip planning settings used by the router object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouterEnvelope">
+      <summary>Deprecated as of 10.1. Provides access to the bounding envelope of the route path.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterEnvelope.Bottom">
+      <summary>The position of the bottom.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterEnvelope.Left">
+      <summary>The position of the left side.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterEnvelope.Right">
+      <summary>The position of the right side.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterEnvelope.Top">
+      <summary>The position of the top.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouterFactory">
+      <summary>Deprecated as of 10.1. Provides access to members for creating SMRouter objects.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterFactory.CreateRouter(System.String)">
+      <summary>Creates a SMRouter object based on information in the input routing initialization file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterFactory.CreateRouterCfg(System.String,System.String)">
+      <summary>Creates a SMRouter object based on additional information in the alternate routing configuration file.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint">
+      <summary>Deprecated as of 10.1. Provides access to the location of single geographic point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint.X">
+      <summary>The X coordinate of the point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterPoint.Y">
+      <summary>The Y coordinate of the point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup">
+      <summary>Deprecated as of 10.1. Provides access to router settings, such as restrictions, backtrack policy, length units.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup.BacktrackPolicy">
+      <summary>Controls the backtrack policy of the route solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup.ClearAllRestrictions">
+      <summary>Removes all restrictions set on the route solver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup.DirectionsLengthUnits">
+      <summary>The output length units used in driving directions.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup.SetRestriction(ESRI.ArcGIS.DataSourcesFile.ISMRestriction)">
+      <summary>Sets a restriction to be used by the route solver.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2">
+      <summary>Deprecated as of 10.1. Provides access to router restrictions settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.BacktrackPolicy">
+      <summary>Controls the backtrack policy of the route solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.ClearAllRestrictions">
+      <summary>Removes all restrictions set on the route solver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.ClearRestriction(System.Int32)">
+      <summary>The method removes restriction at specified position from the list.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.DirectionsLengthUnits">
+      <summary>The output length units used in driving directions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.Restriction(System.Int32)">
+      <summary>Restriction at the position, specified by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.RestrictionCount">
+      <summary>Number of restrictions in the list, which will be applied when finding route.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMRouterSetup2.SetRestriction(ESRI.ArcGIS.DataSourcesFile.ISMRestriction)">
+      <summary>Sets a restriction to be used by the route solver.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData">
+      <summary>Deprecated as of 10.1. Provides access to the meta data of the routing service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.Description">
+      <summary>Descriptive text of the data product used in the routing service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.Geography">
+      <summary>The name of the geographic region covered by the routing service.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.ProductName">
+      <summary>Name of data product.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.ProductVersion">
+      <summary>Version of data product.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.Time">
+      <summary>Date and time of data creation in ISO 8601 format.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMRoutingMetaData.Vendor">
+      <summary>Name of data vendor.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup">
+      <summary>Deprecated as of 10.1. Provides access to the speed group properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup.Description">
+      <summary>Speed group description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup.Speed">
+      <summary>The speed value of the group.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup2">
+      <summary>Deprecated as of 10.1. Provides access to speed group query string.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup2.Description">
+      <summary>Speed group description.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup2.QueryString">
+      <summary>A SQL-like query string for determining records that belong to the speed group.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroup2.Speed">
+      <summary>The speed value of the group.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroups">
+      <summary>Deprecated as of 10.1. Provides access to the collection of speed groups.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroups.Count">
+      <summary>The number of speed groups in the collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMSpeedGroups.Item(System.Int32)">
+      <summary>The speed group at the specified position in the collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMStop">
+      <summary>Deprecated as of 10.1. Provides access to the route stop properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.Description">
+      <summary>Descriptive text of the route stop used in driving directions.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.Duration">
+      <summary>Stop duration in minutes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.EnforceSideOfStreet">
+      <summary>Indicates whether shortest path is restricted when traveling to and from the given stop.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.Flag">
+      <summary>The SMFlag object of the stop that describes its geographic location.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.MinDistanceToTurn">
+      <summary>Minimal allowed distance to turn.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStop.StopID">
+      <summary>Numeric identifier of the user defined route stop.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection">
+      <summary>Deprecated as of 10.1. Provides access to the collection of route stops.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Add(ESRI.ArcGIS.DataSourcesFile.ISMStop)">
+      <summary>Adds a stop to the end of collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Clear">
+      <summary>Removes all stops from the collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Count">
+      <summary>The number of stops in the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Insert(System.Int32,ESRI.ArcGIS.DataSourcesFile.ISMStop)">
+      <summary>Inserts a stop at the specified position in the collection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Item(System.Int32)">
+      <summary>The stop at the specified position in the collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesFile.ISMStopsCollection.Remove(System.Int32)">
+      <summary>Removes the stop at the specified position in the collection.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings">
+      <summary>Deprecated as of 10.1. Provides access to the trip planning settings.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.DayDriveEnd">
+      <summary>Time from midnight when driving must stop every day.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.DayDriveStart">
+      <summary>Time from midnight when driving must start every day.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.DriveBetweenRest">
+      <summary>Driving time between rest breaks in minutes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.DriveFlexibility">
+      <summary>Amount of driving time allowed after the DayDriveEnd time is reached.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.RestBreaksEnable">
+      <summary>Indicates whether periodic rest breaks are enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.RestDuration">
+      <summary>The duration of rest breaks in minutes.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.TripPlanningEnable">
+      <summary>Indicates whether trip planning is enabled.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.ISMTripPlanSettings.TripStart">
+      <summary>The start date of the trip.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IUsageModeInfo">
+      <summary>Provides access to user mode information.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IUsageModeInfo.Name">
+      <summary>Usage mode name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IUsageModeInfo.Option(System.Int32)">
+      <summary>Usage mode option.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IUsageModeInfo.OptionCount">
+      <summary>Usage mode options count.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.IUsageModeOption">
+      <summary>Provides access to user mode options.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IUsageModeOption.Name">
+      <summary>Usage mode option name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesFile.IUsageModeOption.Value">
+      <summary>Usage mode option value.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ArcInfoItem">
+      <summary>ArcInfo Item Object used to create items.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.ArcInfoItemClass">
+      <summary>ArcInfo Item Object used to create items.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType">
+      <summary>ArcInfo Item Datatypes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeDate">
+      <summary>Date.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeCharacter">
+      <summary>Character.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeInteger">
+      <summary>Integer.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeNumber">
+      <summary>Number.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeBinary">
+      <summary>Binary.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeFloat">
+      <summary>Float.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeLeadFill">
+      <summary>LeadFill.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypePacked">
+      <summary>Packed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeZeroFill">
+      <summary>ZeroFill.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeOverpunch">
+      <summary>Overpunch.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeTrailingSign">
+      <summary>TrailingSign.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeOID">
+      <summary>Long Integer representing an object identifier.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeGeometry">
+      <summary>Geometry.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriArcInfoItemType.esriItemTypeBlob">
+      <summary>Binary Large Object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriCadTransform">
+      <summary>The type of transformations applied to a CAD dataset.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCadTransform.esriCadTransformByWorldFile">
+      <summary>Transformation in WorldFile.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCadTransform.esriCadTransformByPoints">
+      <summary>Two point transformation.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCadTransform.esriCadTransformByRst">
+      <summary>Rotate scale and translate.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType">
+      <summary>ArcInfo Coverage Feature Class types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTPoint">
+      <summary>Point Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTArc">
+      <summary>Arc Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTPolygon">
+      <summary>Polygon Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTNode">
+      <summary>Node Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTTic">
+      <summary>Tic Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTAnnotation">
+      <summary>Annotation Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTSection">
+      <summary>Section Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTRoute">
+      <summary>Route Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTLink">
+      <summary>Link Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTRegion">
+      <summary>Region Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTLabel">
+      <summary>Label Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageFeatureClassType.esriCFCTFile">
+      <summary>File Feature Class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriCoveragePrecisionType">
+      <summary>ArcInfo Coverage Precision Types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoveragePrecisionType.esriCoveragePrecisionSingle">
+      <summary>Single Precision.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoveragePrecisionType.esriCoveragePrecisionDouble">
+      <summary>Double Precision.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType">
+      <summary>Coverage Tolerance Types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTFuzzy">
+      <summary>Fuzzy.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTGeneralize">
+      <summary>Generalize.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTNodeMatch">
+      <summary>Node Match.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTDangle">
+      <summary>Dangle.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTTicMatch">
+      <summary>Tic Match.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTEdit">
+      <summary>Edit.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTNodeSnap">
+      <summary>Node Snap.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTWeed">
+      <summary>Weed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTGrain">
+      <summary>Grain.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageToleranceType.esriCTTSnap">
+      <summary>Snap.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriCoverageType">
+      <summary>ArcInfo Coverage Types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriEmptyCoverage">
+      <summary>Empty Coverage - no feature classes are present.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriAnnotationCoverage">
+      <summary>Annotation Coverage - only annotation features are present.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriPointCoverage">
+      <summary>Points are the highest dimension feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriLineCoverage">
+      <summary>Lines are the highest dimension feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriPolygonCoverage">
+      <summary>Polygons are the highest dimension feature class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriCoverageType.esriPreliminaryPolygonCoverage">
+      <summary>Polygon topology is incomplete.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriDataLicenseType">
+      <summary>Data license type enumeration</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriDataLicenseType.esriDataLicSeatType">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriDataLicenseType.esriDataLicFloatType">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology">
+      <summary>ArcInfo Coverage Feature Class Topology Types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology.esriFCTNotApplicable">
+      <summary>Topology is not supported by this Feature Class.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology.esriFCTPreliminary">
+      <summary>Topology is Preliminary.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology.esriFCTExists">
+      <summary>Topology Exists.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriFeatureClassTopology.esriFCTUnknown">
+      <summary>Topology status is Unknown.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType">
+      <summary>Deprecated as of 10.1. Types of azimuth direction.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthN">
+      <summary>North.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthNE">
+      <summary>North-East.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthE">
+      <summary>East.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthSE">
+      <summary>South-East.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthS">
+      <summary>South.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthSW">
+      <summary>South-West.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthW">
+      <summary>West.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthNW">
+      <summary>North-West.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMAzimuthType.esriSMAzimuthUnknown">
+      <summary>Undefined.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMBacktrackPolicy">
+      <summary>Deprecated as of 10.1. Backtrack policy types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMBacktrackPolicy.esriSMBTPDisable">
+      <summary>Prohibit making U-turns anywhere.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMBacktrackPolicy.esriSMBTPAllow">
+      <summary>Allow U-turns unless there is a turn restriction in the source data.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMBacktrackPolicy.esriSMBTPDeadend">
+      <summary>Allow U-turns only at dead ends (unless there is a turn restriction in the source data).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits">
+      <summary>Deprecated as of 10.1. Length units of output directions.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits.esriSMDLUMiles">
+      <summary>Miles.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits.esriSMDLUKilometers">
+      <summary>Kilometers.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits.esriSMDLUMeters">
+      <summary>Meters.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits.esriSMDLUFeet">
+      <summary>Feet.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirectionsLengthUnits.esriSMDLUYards">
+      <summary>Yards.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType">
+      <summary>Deprecated as of 10.1. Types of direction items.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemNewRoad">
+      <summary>Item represents new road name.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemBypass">
+      <summary>Item represents passing near some point of interest.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemBorder">
+      <summary>Item represents border crossing.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemEndOfDay">
+      <summary>Item represents END OF DAY warning.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemDayNumber">
+      <summary>Item represents number of day.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemRestBreak">
+      <summary>Item represents REST BREAK warning.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemDepart">
+      <summary>Item represents departing from stop.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMDirItemType.esriSMDirItemArrive">
+      <summary>Item represents arriving at stop.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType">
+      <summary>Deprecated as of 10.1. Types of network attributes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrInteger">
+      <summary>Net attribute has Integer type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrFloat">
+      <summary>Net attribute has Float type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrDouble">
+      <summary>Net attribute has Double type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrBoolean">
+      <summary>Net attribute has Boolean type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrString">
+      <summary>Net attribute has String type.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeType.esriSMNetAttrShape">
+      <summary>Net attribute has Shape type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType">
+      <summary>Deprecated as of 10.1. Usage types of network attributes.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType.esriSMNAUTCost">
+      <summary>Cost attributes are used as weight when calculating an optimal route.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType.esriSMNAUTDescription">
+      <summary>Description Attribute.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType.esriSMNAUTRestrictionBoolean">
+      <summary>Prohibit traversal along a segment when the attribute value is TRUE.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType.esriSMNAUTRestrictionMinAllowed">
+      <summary>Prohibit traversal along a segment when attribute value is less than specified restriction parameter.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMNetAttributeUsageType.esriSMNAUTRestrictionMaxAllowed">
+      <summary>Prohibit traversal along a segment when attribute value is greater than specified restriction parameter.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMRestrictionType">
+      <summary>Deprecated as of 10.1. Routing restriction policy types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMRestrictionType.esriSMRTStrict">
+      <summary>Never violate this restriction.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMRestrictionType.esriSMRTRelaxed">
+      <summary>Violate this restriction only if no other route can be calculated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMRoadType">
+      <summary>Deprecated as of 10.1. Road types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMRoadType.esriSMRoadTypeHighways">
+      <summary>Corresponds to highways.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMRoadType.esriSMRoadTypeFerries">
+      <summary>Corresponds to ferries.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesFile.esriSMStreetSideType">
+      <summary>Deprecated as of 10.1. Side of street.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMStreetSideType.esriSMStreetSideLeft">
+      <summary>Represents the left side.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMStreetSideType.esriSMStreetSideRight">
+      <summary>Represents the right side.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesFile.esriSMStreetSideType.esriSMStreetSideUndefined">
+      <summary>Both sides are allowed.</summary>
+    </member>
+  </members>
+</doc>

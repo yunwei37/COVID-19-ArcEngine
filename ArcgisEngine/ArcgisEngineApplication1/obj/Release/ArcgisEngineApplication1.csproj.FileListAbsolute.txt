@@ -1,0 +1,6 @@
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.AttrForm.resources
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.Form1.resources
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.Properties.Resources.resources
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.SelectionForm.resources
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.csproj.GenerateResource.cache
+D:\works\GIS\ArcgisEngine(1)\ArcgisEngine\ArcgisEngineApplication1\obj\Release\ArcgisEngineApplication1.exe.licenses

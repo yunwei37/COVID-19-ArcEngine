@@ -46,7 +46,7 @@ namespace ArcgisEngineApplication1
             string[] ShpFile = new string[2];
             OpenFileDialog OpenShpFile = new OpenFileDialog();
             OpenShpFile.Title = "打开Shape文件";
-            OpenShpFile.InitialDirectory = "D:";
+            OpenShpFile.InitialDirectory = "E:";
             OpenShpFile.Filter = "Shape文件(*.shp)|*.shp";
 
             if (OpenShpFile.ShowDialog() == DialogResult.OK)
@@ -267,7 +267,13 @@ namespace ArcgisEngineApplication1
             }
             return datable;
         }
-
+        /// <summary>
+        /// 唯一值渲染
+        /// </summary>
+        /// <param name="activeView"></param>
+        /// <param name="pFtLayer"></param>
+        /// <param name="pCount"></param>
+        /// <param name="pFieldName"></param>
         public static void  UniqueValueRender (IActiveView activeView, IFeatureLayer pFtLayer, int pCount, string pFieldName)
 
         {
@@ -412,6 +418,123 @@ namespace ArcgisEngineApplication1
 
         }
 
+        /// <summary>
+        /// 分级色彩渲染
+        /// </summary>
+        /// <param name="pMapControl"></param>
+        /// <param name="pFtLayer"></param>
+        /// <param name="ClassCount"></param>
+        /// <param name="pFieldName"></param>
+        public static void ClassRender (IActiveView activeView, IFeatureLayer pFtLayer, int ClassCount, string pFieldName)
+
+          {
+
+            IGeoFeatureLayer pGeolayer;
+
+            IActiveView pActiveView;
+
+            pGeolayer = pFtLayer as IGeoFeatureLayer;
+           
+
+            //以下是为了统计和分类所需要的对象 ITable pTable;
+
+            IClassifyGEN pClassify; //C\#要作为分类对象。 
+            ITableHistogram pTableHist; //相当于一个统计表 
+            IBasicHistogram pBasicHist; //这个对象有一个很重要的方法 
+            double[] ClassNum=new double[6];
+
+            int ClassCountResult; //返回分类个数。 IHsvColor pFromColor;
+
+            IRgbColor pToColor; //用于构建另外一个颜色带对象。 IAlgorithmicColorRamp pAlgo;
+
+            ITable pTable = pGeolayer as ITable;
+
+            pBasicHist = new BasicTableHistogramClass (); //也可以实例化pTableHist 
+            pTableHist = pBasicHist as ITableHistogram;
+
+            pTableHist.Table = pTable;
+            pTableHist.Field = pFieldName;
+            object datavalus;
+
+            object Frenquen;
+
+            pBasicHist.GetHistogram (out datavalus, out Frenquen); //获得数据和相应的频数。
+            pClassify = new EqualIntervalClass ();
+            try
+
+            {
+              pClassify.Classify (datavalus, Frenquen, ref ClassCount);
+
+            } catch (Exception e)
+
+            {
+
+              MessageBox.Show (e.Message);
+
+            }
+
+            // 分类完成
+
+            //ClassNum = (double[])pClassify.ClassBreaks;\
+            ClassNum[0]= 10.0;
+            ClassNum[1] = 50.0;
+            ClassNum[2] = 100.0;
+            ClassNum[3] = 1000.0;
+            ClassNum[4] = 10000.0;
+            ClassNum[5] = 80000.0;
+
+            ClassCountResult = ClassNum.GetUpperBound (0); //返回分级个数。 
+            IClassBreaksRenderer pClassBreak;
+
+            pClassBreak = new ClassBreaksRendererClass ();
+            pClassBreak.Field = pFieldName;
+            pClassBreak.BreakCount = ClassCountResult;
+            pClassBreak.SortClassesAscending = true;
+
+            IAlgorithmicColorRamp pAlgo = new AlgorithmicColorRampClass ();
+
+            pAlgo.Algorithm = esriColorRampAlgorithm.esriHSVAlgorithm;
+            IColor pFromColor = GetRgbColor (255, 240, 240);
+
+            pToColor = GetRgbColor (255, 0, 0);
+            pAlgo.FromColor = pFromColor;
+            pAlgo.ToColor = pToColor;
+            pAlgo.Size = ClassCountResult;
+            bool ok;
+
+            pAlgo.CreateRamp (out ok);
+            IEnumColors pEnumColor;
+            pEnumColor = pAlgo.Colors;
+            pEnumColor.Reset ();
+
+            IColor pColor;
+            ISimpleFillSymbol pSimFill;
+
+            for (int indexColor = 0; indexColor <= ClassCountResult - 1; indexColor++)
+
+            {
+
+              pColor = pEnumColor.Next ();
+
+              pSimFill = new SimpleFillSymbolClass ();
+              pSimFill.Color = pColor;
+
+              // pSimFill.Color = pRgbColor[indexColor ]; 
+              pSimFill.Style = esriSimpleFillStyle.esriSFSSolid;
+
+              //染色
+
+              pClassBreak.set_Symbol (indexColor, pSimFill as ISymbol);
+              pClassBreak.set_Break (indexColor, ClassNum[indexColor + 1]);
+
+            }
+
+            pGeolayer.Renderer = pClassBreak as IFeatureRenderer;
+
+            activeView.PartialRefresh(esriViewDrawPhase.esriViewGeography, null, null);
+
+          }
+
         //添加图层标注
         public static void EnableFeatureLayerLabel(IFeatureLayer pFeaturelayer, string sLableField, IRgbColor pRGB, int size, string angleField)
         {
@@ -465,6 +588,7 @@ namespace ArcgisEngineApplication1
             pGeoFeaturelayer.DisplayAnnotation = true;//很重要，必须设置 
             //axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null); }
         }
+
 
 
         #region RGB颜色

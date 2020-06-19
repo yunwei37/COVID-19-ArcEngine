@@ -16,6 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ToolClass.Operation;
+using Util;
 
 namespace ArcgisEngineApplication1
 {
@@ -26,10 +27,15 @@ namespace ArcgisEngineApplication1
         private INewEnvelopeFeedback pNewEnvelopeFeedback; 
         private EnumMapSurroundType _enumMapSurType = EnumMapSurroundType.None;
         private IPoint m_MovePt = null;
-        private IPoint m_PointPt = null;     
+        private IPoint m_PointPt = null;
+        private int type=0;
+        private IGraphicsContainer pGraphicsContainer;
+        private IElement pElement = null;
         public Form1()
         {
             InitializeComponent();
+            pGraphicsContainer = this.axMapControl1.Map as IGraphicsContainer;
+  
         }
 
         /// <summary>
@@ -113,7 +119,7 @@ namespace ArcgisEngineApplication1
         {
             if (pCurrentLayer != null)
             {
-                AttrForm attrForm = new AttrForm(pCurrentLayer);
+                AttrForm attrForm = new AttrForm(pCurrentLayer,this.axMapControl1.ActiveView);
                 attrForm.ShowDialog();
             }
             
@@ -204,7 +210,7 @@ namespace ArcgisEngineApplication1
             {
                 ILegendItem pLegendItem = new HorizontalLegendItemClass();
                 pLegendItem.Layer = pActiveView.FocusMap.get_Layer(i);//获取添加图例关联图层             
-                pLegendItem.ShowDescriptions = false;
+                pLegendItem.ShowDescriptions = true;
                 pLegendItem.Columns = 1;
                 pLegendItem.ShowHeading = true;
                 pLegendItem.ShowLabels = true;
@@ -532,8 +538,8 @@ namespace ArcgisEngineApplication1
                 pFt.Store();
                 pFt = pFtCursor.NextFeature();
             }
-
-            GisClass.UniqueValueRender(this.axMapControl1.ActiveView,layer,10,"num");
+            GisClass.ClassRender(this.axMapControl1.ActiveView, layer, 6, "num");
+            //GisClass.UniqueValueRender(this.axMapControl1.ActiveView,layer,10,"num");
         }
 
         private void 添加标注ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -541,6 +547,244 @@ namespace ArcgisEngineApplication1
             IRgbColor rgb=GisClass.GetRgbColor(0,0,0);
             GisClass.EnableFeatureLayerLabel(pCurrentLayer, "NAME", rgb,10,"");
             axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null); 
+        }
+
+        
+
+        private void drawPolygon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.type = 1;
+            IPolygonElement polygonElement = new PolygonElementClass();
+            pElement = polygonElement as IElement;
+            ISimpleFillSymbol simpleFill = new SimpleFillSymbolClass();
+            simpleFill.Style = esriSimpleFillStyle.esriSFSNull;
+            simpleFill.Color = GisClass.GetRgbColor(255,0,0);
+            //设置边线颜色
+            ILineSymbol lineSymbol = new SimpleLineSymbol();
+            lineSymbol.Color = GisClass.GetRgbColor(255, 0, 0);
+            IFillShapeElement shapeEle = pElement as IFillShapeElement;
+
+            simpleFill.Outline = lineSymbol;
+            shapeEle.Symbol = simpleFill;
+            pGraphicsContainer.AddElement(pElement, 0);
+        
+          
+        }
+
+
+        private void axMapControl1_OnMouseDown(object sender, IMapControlEvents2_OnMouseDownEvent e)
+        {
+            try
+            {
+                if (this.type == 1)
+                {
+
+                    IGeometry Polygon = axMapControl1.TrackPolygon();
+                    pElement.Geometry = Polygon;
+                    axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
+                }
+                else if (this.type == 2)
+                {
+                    IGeometry rec = axMapControl1.TrackRectangle();
+                    pElement.Geometry = rec;
+                    axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
+                }
+                else if (this.type == 3)
+                {
+                    IGeometry rec = axMapControl1.TrackCircle();
+                    pElement.Geometry = rec;
+                    axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
+                }
+
+            }
+            catch (Exception ex) {
+                MessageBox.Show("绘制取消");
+            }
+            
+        }
+
+        private void drawRec_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.type = 2;
+            IRectangleElement recElement = new RectangleElementClass();
+            pElement = recElement as IElement;
+            //设置填充颜色
+            SimpleFillSymbol simpleFill = new SimpleFillSymbolClass();
+            simpleFill.Style = esriSimpleFillStyle.esriSFSNull;
+            simpleFill.Color = GisClass.GetRgbColor(255, 0, 0);
+            //设置边线颜色
+            ILineSymbol lineSymbol = new SimpleLineSymbol();
+            lineSymbol.Color = GisClass.GetRgbColor(255,0,0);
+            IFillShapeElement shapeEle = pElement as IFillShapeElement;
+
+            simpleFill.Outline = lineSymbol;
+            shapeEle.Symbol = simpleFill;
+         
+            pGraphicsContainer.AddElement(pElement, 0);
+        }
+
+        private void drawCircle_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.type = 3;
+            ICircleElement circleEle = new CircleElementClass();
+            pElement = circleEle as IElement;
+            SimpleFillSymbol simpleFill = new SimpleFillSymbolClass();
+            simpleFill.Style = esriSimpleFillStyle.esriSFSNull;
+            simpleFill.Color = GisClass.GetRgbColor(255, 0, 0);
+            //设置边线颜色
+            ILineSymbol lineSymbol = new SimpleLineSymbol();
+            lineSymbol.Color = GisClass.GetRgbColor(255, 0, 0);
+            IFillShapeElement shapeEle = pElement as IFillShapeElement;
+
+            simpleFill.Outline = lineSymbol;
+            shapeEle.Symbol = simpleFill;
+            pGraphicsContainer.AddElement(pElement, 0);
+        }
+
+        private void drawEnd_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.type = 0;
+            pGraphicsContainer.DeleteAllElements();
+            axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
+        }
+
+        private void add_btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddForm addForm = new AddForm();
+            addForm.ShowDialog();
+        }
+
+        private void query_btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ArrayList arr = new ArrayList();
+            DataTable dt = OperateDatabase.select("data", arr);
+            this.gridControl1.DataSource = dt;
+            this.tabControl2.SelectedIndex = 1;
+        }
+
+        private void delete_btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.gridView1.IsFocusedView)
+            {
+                DataRow dr = this.gridView1.GetDataRow(this.gridView1.FocusedRowHandle);
+                string id = dr["id"].ToString();
+                if (MessageBox.Show("先选中才能删除，确认删除该行吗？", "删除", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    ArrayList arr_where = new ArrayList();
+                    arr_where.Add("id:" + id);
+                    int result = OperateDatabase.Delete("data", arr_where);
+                    if (result == 1)
+                    {
+                        MessageBox.Show("删除成功");
+                        return;
+                    }
+                    gridView1.DeleteSelectedRows();
+                   
+                }
+            }
+            else {
+                MessageBox.Show("请先选择一行");
+            }
+            
+        }
+
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+             //获取修改的单元格
+            string CellValue = this.gridView1.GetFocusedValue().ToString();
+            //获取单元格的列名
+            string ColumnName = this.gridView1.FocusedColumn.FieldName;
+            //获取所在列的id
+            DataRow dr = this.gridView1.GetDataRow(e.RowHandle);
+            string id = dr["id"].ToString();
+            //修改
+            ArrayList arr = new ArrayList();
+            if (ColumnName == "name" || ColumnName == "YMD")
+            {
+                arr.Add(ColumnName + ":'" + CellValue + "'");
+            }
+            else
+            {
+                arr.Add(ColumnName + ":" + CellValue);               
+            }
+            ArrayList arr_where = new ArrayList();
+            arr_where.Add("id:" + id);
+            int result = OperateDatabase.Update("data", arr, arr_where);
+            if (result == 0)
+            {
+                MessageBox.Show("该值修改失败");
+            }
+        }
+
+        private void Statics_btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            StaticsForm staticsForm = new StaticsForm();
+            staticsForm.ShowDialog();
+        }
+
+        private void route_Search_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (this.start_time.EditValue == "" || this.end_time.EditValue == "") {
+                MessageBox.Show("请选择起止日期");
+                return;
+            }
+            SqlHelper help = new SqlHelper();
+            String sql = "select * from route where tm between '" + this.start_time.EditValue + "' and '" + this.end_time.EditValue+"'";
+            DataTable dt = help.getMySqlRead(sql);
+            ISimpleMarkerSymbol simpleMarkerSymbol = new SimpleMarkerSymbol();
+            simpleMarkerSymbol.Style = esriSimpleMarkerStyle.esriSMSCircle;
+            IColor color = GisClass.GetRgbColor(0,255,0);
+            simpleMarkerSymbol.Color = color;
+            ILineElement lineElement = new LineElementClass();
+            IElement ele1 = lineElement as IElement;
+            ISegment pSegment;
+            ILine pLine=null;
+            object o = Type.Missing;
+            ISegmentCollection pPath = new PathClass();
+            for (int i = 0; i < dt.Rows.Count; i++) {
+
+                IMarkerElement markerEle = new MarkerElementClass();
+                IElement ele=markerEle as IElement;
+                IPoint point = new PointClass();
+                markerEle.Symbol = simpleMarkerSymbol;
+                point.PutCoords(Double.Parse(dt.Rows[i]["x"].ToString()),Double.Parse(dt.Rows[i]["y"].ToString()));
+                ele.Geometry = point;
+                pGraphicsContainer.AddElement(ele,0);
+                //逐段添加线
+                if (i > 0 && i < dt.Rows.Count) {
+                    IPoint point1 = new PointClass();
+                    point1.PutCoords(Double.Parse(dt.Rows[i-1]["x"].ToString()), Double.Parse(dt.Rows[i-1]["y"].ToString()));
+                    pLine = new LineClass();
+                    pLine.PutCoords(point1, point);
+                    pSegment = pLine as ISegment;
+                    pPath.AddSegment(pSegment, ref o, ref o);
+                }
+              
+               
+                axMapControl1.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewBackground, null, null);
+            }
+            IGeometryCollection pPolyline = new PolylineClass();
+            pPolyline.AddGeometry(pPath as IGeometry, ref o, ref o);
+            IPolyline polyline = pPolyline as IPolyline;
+            //获取范围
+            IEnvelope ev = polyline.Envelope;
+            this.axMapControl1.ActiveView.Extent = ev;
+            ele1.Geometry = pPolyline as IPolyline;
+            pGraphicsContainer.AddElement(ele1, 0);
+        }
+
+        private void delete_ele_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+             IGraphicsContainerSelect pGraphicsCSelect = this.axPageLayoutControl1.GraphicsContainer as IGraphicsContainerSelect;
+            IEnumElement pEnumEle = pGraphicsCSelect.SelectedElements;
+            IElement ele = pEnumEle.Next();
+            while (ele!=null)
+            {
+                this.axPageLayoutControl1.GraphicsContainer.DeleteElement(ele);
+                this.axPageLayoutControl1.Refresh();
+                ele = pEnumEle.Next();
+            }
+           
         } 
        
     }

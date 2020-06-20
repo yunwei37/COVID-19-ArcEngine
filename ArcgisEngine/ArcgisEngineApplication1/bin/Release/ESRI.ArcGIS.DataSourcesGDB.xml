@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.DataSourcesGDB</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo">
+      <summary>Infomation about database locks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.DatasetType">
+      <summary>The type of the locked dataset, if it is a dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.IsOwnLock">
+      <summary>Is the lock from the current connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.LockMode">
+      <summary>The mode of the lock.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.LockOwner">
+      <summary>The user that owns the lock.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.LockTime">
+      <summary>The time when the lock was acquired.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.LockType">
+      <summary>The type of lock.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.ObjectID">
+      <summary>The ID of the locked object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.ObjectName">
+      <summary>The name of the locked object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLockInfo.SessionID">
+      <summary>The session that owns the lock.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLocksInfo">
+      <summary>Methods for getting information about locks in a database.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDatabaseLocksInfo.AllLocks">
+      <summary>All the locks in the database.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager">
+      <summary>Provides access to the DataServerManager object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.AvailableMemory">
+      <summary>The total available memory (MB).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.Connect">
+      <summary>Connects to an initialized Data Server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.CreateConnectionFile(System.String,System.String)">
+      <summary>Create a Data Server connection file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.DataServerClass">
+      <summary>The server class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.DataServerType">
+      <summary>The type of data server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.Disconnect">
+      <summary>Disconnects from the Data Server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.InitFromFile(System.String)">
+      <summary>Initializes a saved connection to the GIS Data Server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.IsConnected">
+      <summary>Indicates whether the server is connected or not.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.ProductName">
+      <summary>The product name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.ProductVersion">
+      <summary>The product version.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManager.ServerName">
+      <summary>The data server name.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin">
+      <summary>Provides access to administration functions of a Data Server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.Analyze(System.String)">
+      <summary>Updates the statistics for a Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.AttachGeodatabase(System.String,System.String,System.String)">
+      <summary>Attachs an existing database to a server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.BackupGeodatabase(System.String,System.String,System.String,System.String)">
+      <summary>Performs a full backup on the specified Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.CreateGeodatabase(System.String,System.String,System.Int32,System.String,System.Int32)">
+      <summary>Creates a new Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.CreateLogin(System.String,System.Boolean)">
+      <summary>Creates a new login.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.CreateWorkspaceName(System.String,System.String,System.Object)">
+      <summary>Creates a Workspace Name object to the Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.DeleteGeodatabase(System.String)">
+      <summary>Deletes a Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.DeleteLogin(System.String)">
+      <summary>Deletes a login.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.DetachGeodatabase(System.String)">
+      <summary>Detachs a database from a server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetConnectedUsers(System.String)">
+      <summary>Gets active users.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetDBProperties(System.String,System.String@,System.Int32@,System.String@,System.Object@,System.Object@)">
+      <summary>Returns various properties on a Database.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetFileProperties(System.String,System.String@,System.String@,System.Int32@,System.String@,System.String@,System.Int32@)">
+      <summary>Return various properties on a database file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetGeodatabaseName(System.String)">
+      <summary>Returns the Database name from the database file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetGeodatabaseNames">
+      <summary>Returns a list of Geodatabse names.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetLogins(ESRI.ArcGIS.esriSystem.IEnumBSTR@,ESRI.ArcGIS.esriSystem.IEnumBSTR@,ESRI.ArcGIS.esriSystem.IEnumBSTR@,ESRI.ArcGIS.esriSystem.IEnumBSTR@)">
+      <summary>Returns a list logins and associated information.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetServerAdministrators(ESRI.ArcGIS.esriSystem.IEnumBSTR@)">
+      <summary>Gets a list of server administrators.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.GetUsersByPermissionType(System.String,ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType,ESRI.ArcGIS.esriSystem.IEnumBSTR@)">
+      <summary>Get Users in by the Permission type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.IsConnectedUserAdministrator">
+      <summary>Indicates whether the connected user is an administrator or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.IsSimpleRecoveryModel(System.String,System.Boolean@)">
+      <summary>Returns whether the Geodatabase is in simple recovery model or not.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.ModifyGeodatabaseSecurity(System.String,System.String,ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType)">
+      <summary>Modify a login's database security.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.ModifyLoginSecurity(System.String,System.Boolean)">
+      <summary>Modify a login's server security.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.RebuildIndices(System.String)">
+      <summary>Rebuilds the indices on all tables in a Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.RestoreGeodatabase(System.String,System.String,System.String)">
+      <summary>Restores a backup for the specified Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.SetGeodatabaseToSimpleRecoveryModel(System.String)">
+      <summary>Sets a Geodatabase to simple recovery model.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.ShrinkGeodatabase(System.String)">
+      <summary>Shrinks the size of a Geodatabase and frees up unused space.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.UpgradeGeoDatabase(System.String)">
+      <summary>Upgrades a Geodatabase.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IDataServerManagerAdmin.UpgradeSDESchema(System.String)">
+      <summary>Upgrades the SDE schema.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IEnumDatabaseLockInfo">
+      <summary>An enumeration of locks in a database.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IEnumDatabaseLockInfo.Next">
+      <summary>A lock in the database.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IEnumDatabaseLockInfo.Reset">
+      <summary>Resets the enumeration.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IFileGDBLockWaiting">
+      <summary>File GeoDatabase interface to control write lock waiting.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IFileGDBLockWaiting.DisableWriteLockWaiting">
+      <summary>Disable write lock waiting.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IFileGDBLockWaiting.EnableWriteLockWaiting(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Enable write lock waiting, specifying number of retries and how long to wait between tries.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.IServiceControl">
+      <summary>Provides access to members controlling the database service.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.ContinueServer">
+      <summary>Continues the server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.HasControlPermissions">
+      <summary>Indicates whether the user has permissions to control the service.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.PauseServer">
+      <summary>Pauses the server.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.ServerStatus">
+      <summary>The status of the server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.StartServer">
+      <summary>Starts the server.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesGDB.IServiceControl.StopServer">
+      <summary>Stops the server.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.AccessWorkspaceFactory">
+      <summary>Esri Access Workspace Factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.AccessWorkspaceFactoryClass">
+      <summary>Esri Access Workspace Factory.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType">
+      <summary>Data Server status.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerUnknown">
+      <summary>Server status unknown.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerStopped">
+      <summary>Server stopped.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerStartPending">
+      <summary>Server start pending.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerStopPending">
+      <summary>Server stop pending.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerRunning">
+      <summary>Server running.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerContinuePending">
+      <summary>Server continue pending.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerPausePending">
+      <summary>Server pause pending.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerStatusType.esriServerPaused">
+      <summary>Server paused.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType">
+      <summary>Data Server types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSOracle8i">
+      <summary>Oracle 8I.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSOracle9i">
+      <summary>Oracle 9I.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esirDSOracle10g">
+      <summary>Oracle 10G.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSMsSqlServer">
+      <summary>Microsoft SQL Server.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSInformix">
+      <summary>Informix.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSDB2">
+      <summary>IBM DB2.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriDataServerType.esriDSPostgreSQL">
+      <summary>PostgreSQL.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType">
+      <summary>Geodatabase permissions.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType.esriPermNone">
+      <summary>No permission.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType.esriPermReadData">
+      <summary>Read data permission.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType.esriPermWriteData">
+      <summary>Read/Write data permission.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriGeodatabasePermissionsType.esriPermAdmin">
+      <summary>Geodatabase Admin permission.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockMode">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockMode.esriLockModeShared">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockMode.esriLockModeExclusive">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockType">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockType.esriLockTypeSchema">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockType.esriLockTypeState">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.esriSdeLockType.esriLockTypeVersion">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesGDB.sdeError">
+      <summary>ArcSDE error codes mapped to HRESULTs.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FAILURE">
+      <summary>ArcSDE Error.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LAYERINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ANNOTATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FINISHED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDE_NOT_STARTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNCHANGED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TASKS_EXCEEDED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CONNECTIONS_EXCEEDED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOGIN_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_USER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NET_FAILURE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NET_TIMEOUT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_SVMEM">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_CLMEM">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_CONTEXT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ACCESS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_LAYERS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_LAYER_SPECIFIED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_LOCKED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_INUSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FID_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROW_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FID_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROW_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_MISMATCH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_PERMISSIONS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_NOT_NULL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SHAPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LAYER_NUMBER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ENTITY_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SEARCH_METHOD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ETYPE_MASK">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_BIND_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GRIDSIZE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCK_MODE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ETYPE_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_POINTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_NUM_OF_PTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ATTR_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LICENSE_FAILURE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_LICENSES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COLUMN_VALUE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_WHERE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SQL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_NOACCESS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_NOTOPEN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_IO_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_SHAPES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_LOCKS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOCK_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_LOCKS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DB_IO_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STREAM_IN_PROGRESS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COLUMN_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOPO_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ATTR_CONV_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COLUMN_DEF">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SHAPE_BUF_SIZE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ENVELOPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TEMP_IO_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GSIZE_TOO_SMALL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LICENSE_EXPIRED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INDEX_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INDEX_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_POINTER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_PARAM_VALUE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ALL_SLIVERS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TRANS_IN_PROGRESS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_IOMGR_NO_DBMS_CONNECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DUPLICATE_ARC">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ANNO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PT_NO_EXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PTS_NOT_ADJACENT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_MID_PT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_END_PT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RADIUS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOAD_ONLY_LAYER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYERS_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FILE_IO_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_BLOB_SIZE_TOO_LARGE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CORRIDOR_OUT_OF_BOUNDS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SHAPE_INTEGRITY_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_IMPLEMENTED_YET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CAD_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_TRANSID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LAYER_NAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LAYER_KEYWORD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RELEASE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VERSION_TBL_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_COLUMN_NOT_BOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_INDICATOR_VALUE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_CONNECTION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DBA_PASSWORD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PATH_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDEHOME_NOT_SET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_TABLE_OWNER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PROCESS_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DBMS_LOGIN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PASSWORD_TIMEOUT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SERVER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_IOMGR_NOT_AVAILABLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SERVICE_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STATS_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DISTINCT_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GRANT_REVOKE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SDEHOME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STREAM">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_STREAMS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUT_OF_MUTEXES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CONNECTION_LOCKED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CONNECTION_IN_USE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_A_SELECT_STATEMENT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FUNCTION_SEQUENCE_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_WRONG_COLUMN_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PTABLE_LOCKED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PTABLE_IN_USE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STABLE_LOCKED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STABLE_IN_USE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_FILTER_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_CAD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_NOT_AVAILABLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_TOO_EARLY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SYSTEM_UNITS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_UNITS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_CAD_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VERSION_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SPATIAL_CONSTRAINT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STREAM_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SPATIAL_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_SPATIAL_MASKS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_IOMGR_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SYSTEM_IS_CLIENT_ONLY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MULTIPLE_SPATIAL_COLS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SHAPE_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_PARTNUM">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INCOMPATIBLE_SHAPES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_PART_OFFSET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INCOMPATIBLE_COORDREFS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_COORD_OUT_OF_BOUNDS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_CACHE_FULL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COORDREF_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COORDSYS_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COORDSYS_DESC">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ROW_ID_LAYER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PROJECTION_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ARRAY_BYTES_EXCEEDED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_POLY_SHELLS_OVERLAP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_FEW_POINTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_PART_SEPARATOR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_POLYGON_CLOSURE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_OUTER_SHELL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ZERO_AREA_POLYGON">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_POLYGON_HAS_VERTICAL_LINE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OUTER_SHELLS_OVERLAP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SELF_INTERSECTING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_EXPORT_FILE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_READ_ONLY_SHAPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DATA_SOURCE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STREAM_SPEC">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ALTER_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SPATIAL_COL_NAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DATABASE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIAL_SQL_NOT_INSTALLED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NORM_DIM_INFO_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NORM_DIM_TAB_VALUE_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNSUPPORTED_NORMALIZED_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_REGISTERED_LAYER_OPTION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_READ_ONLY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_SDE_ROWID_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_READ_ONLY_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_VERSION_NAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STATEINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VERSION_HAS_MOVED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_HAS_CHILDREN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PARENT_NOT_CLOSED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VERSION_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_NOT_MULTIVERSION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_USED_BY_VERSION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_VERSIONINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STATE_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDETRACELOC_NOT_SET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ERROR_LOADING_SSA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_STATES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATES_ARE_SAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ROWID_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_STATE_SET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SSA_FUNCTION_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_REGINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_COMMON_LINEAGE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_INUSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_TREE_INUSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERCOLUMN_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_MVTABLE_INDEX">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_STORAGE_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_AMBIGUOUS_NIL_SHAPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_BYTE_ORDER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GEOMETRY_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_NUM_MEASURES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_NUM_PARTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_BINARY_TOO_SMALL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SHAPE_TEXT_TOO_LONG">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SHAPE_TEXT_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_PARTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TYPE_MISMATCH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQL_PARENTHESIS_MISMATCH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NIL_SHAPE_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_ALREADY_RUNNING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNSUPPORTED_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_EXTERNAL_LAYER_OPTION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NORMALIZE_VALUE_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERY_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_TRACE_LIBRARY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TRACE_ON">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TRACE_OFF">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SCL_SYNTAX_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_REGISTERED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_REGISTRATION_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_NOREGISTERED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_REGISTRATIONS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DELETE_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROWLOCKING_ENABLED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROWLOCKING_NOT_ENABLED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERCOLUMN_INUSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERCOLUMN_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERCOLUMN_NUMBER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_RASTERCOLUMNS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_NUMBER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_REQUEST_STATUS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_REQUEST_RESULTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTER_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTER_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_RASTERBANDS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_RASTERS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VIEW_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VIEW_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOCK_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROWLOCK_MASK_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_IN_RASTER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASBANDINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASCOLINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERBAND_NUMBER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MULTIPLE_RASTER_COLS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_SCHEMA_IS_LOCKED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOGINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQL_TOO_LONG">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNSUPPORTED_ON_VIEW">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_IS_OPEN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIALREF_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIALREF_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIALREF_IN_USE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SPATIALREFINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SEQUENCENBR_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_QUERYINFO_NOT_PREPARED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTILEINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASCONSTRAINT_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_METADATA_RECORD_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_METADATA_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_METADATA_OBJECT_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDEMETADATA_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_METADATA_RECORD_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GEOMETRYCOL_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_FILE_PATH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR_OBJECT_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_HAS_NO_LOCATOR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR_CATEGORY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR_NAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOCATOR_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOCATOR_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_COORDREF">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CANT_TRIM_RECONCILED_STATE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FILE_OBJECT_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FILE_OBJECT_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_FILEINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_FILEINFO_OBJECT_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_NO_STATS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_VERSION_HAS_CHILDREN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQLTYPE_UNSUPPORTED_ETYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_DBTUNE_FILE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOG_SYSTABLES_CREATE_FAILED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OBJECT_RESTRICTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GEOGTRAN_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_COLUMN_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQL_KEYWORD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_OBJECTLOCKINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBUFFER_TOO_SMALL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_DATA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OPERATION_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERATTR_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_VERSION_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MVTABLE_CANT_BE_LOAD_ONLY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SDO_GEOM_METADATA_OBJ">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ROW_OUT_OF_SEQUENCE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_IS_READ_ONLY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MOSAIC_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_BITMAP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SEQUENCENBR_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQLTYPE_INVALID_FEATURE_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DBMS_OBJECTS_NOT_SUPPORTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_BINARY_CONV_NO_COLUMNS_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_NO_COLORMAP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_BIN_FUNCTION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERBAND_STATS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERBAND_COLORMAP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_KEYWORD">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INCOMPATIBLE_INSTANCE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_VOLUME_INFO">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COMPRESSION_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_INDEX_PARAM">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_INDEX_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SET_VALUE_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ADT_DATATYPE_NOT_SUPPORTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_SPATIAL_INDEX">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_IDENTIFIER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_REGISTERED_TABLE_ROWID_EXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SERVER_LIB_LOAD_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_REGISTRATION_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNSUPPORTED_ON_MVTABLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ARCSDE_LICENSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_UNSUPPORTED_EXPORT_FILE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_INUSE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLINDEX_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_TAG_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_INDEX_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_INDEX_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XML_INDEX_ALTER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_TEMPLATE_IN_USE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_XML_INDEX_OWNER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLDOC_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_TAG_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_PARSE_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYERS_COLUMN_NOEXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DATE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_MISMATCH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XPATH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_NOT_SUPPORTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_COLUMNINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLTAG_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLINDEX_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCEDB_UNSUPPORTED_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_INVALID_LOCATION_ALIAS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_PREDICATE_INVALID_TOKEN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_PREDICATE_INVALID_OPERATOR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_PREDICATE_INVALID_CONTAIN_SYNTAX">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_EMPTY_ELEMENT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XPATH_INVALID_TOKEN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDETMP_NOT_SET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SERVERINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_USER_GROUP_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GCDRULE_FILE_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GCDRULE_FILE_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GCDRULE_NOT_FOUND">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_GCDRULE_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLCOLUMN_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GROUP">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XML_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LOCATOR_PROPERTY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOCATOR_PROPERTY_MULTIPLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DB_SRCH_OUTGEOD_EXTENT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_NOT_INDEXED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_SDE_UUID_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_UUID_COLUMN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_64BIT_LAYER_NOT_SUPPORTED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_INDEX_MASK">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_PRECISION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_TRANSFORMINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERBAND_XFORM_LIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_NO_XFORM_LIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYCOLUMN_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MULTIPLE_SHAPESOURCE_SHAPES">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYSELECT_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SHAPESOURCE_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_SPATIALCONSTRAINT_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MISSING_JOIN_CONSTRAINT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ANSI_JOIN_CONFLICT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MISSING_JOIN_TABLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYTABLE_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYFROM_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLCONSTRAINT_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ATTRIBUTECONSTRAINT_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_QUERYWHERE_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CPG_OPEN_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CPG_CONVERSION_OVERFLOW">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_CPG_CONVERSION_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATE_CLOSED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ON_BASE_STATE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DC_LICENSE_SERVER_NOT_REGISTERED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ID_RANGE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_STATEOBJECT_HAS_NO_LINEAGE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OGCWKB_UNSUPPORTED_EYTPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SET_ORIGIN_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_IMAGE_ORIGIN">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTERBAND_NO_GDB_METADATA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTERBAND_GDB_METADATA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_COMPLEX_COL_INDX_NOT_ALLOWED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_COMPRESS_ALREADY_RUNNING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SCHEMA_OUT_OF_DATE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_MVTABLE_HAS_DELTA_ROWS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOST_DBMS_CONNECTION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INT32_OVERFLOW">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DBTUNEPARAM_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DBTUNEKEYWORD_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_ARCHIVING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_NOT_ARCHIVING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_XMLCOLUMN_ALTER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_INSTANCEINFO_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SCHEMA_EXISTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SCHEMA_NO_CREATE_PERMISSIONS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYER_REGISTERED_OUTSIDE_SCHEMA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_REGISTERED_OUTSIDE_SCHEMA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NOT_IN_USER_TRANS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DATASOURCE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SCHEMA_NOT_MASTER_INSTANCE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_ALTERINDEX_MODE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_LOAD_MODE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_XML_COLUMN_NORMAL_MODE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LOAD_ONLY_TABLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ARCHIVING_REGISTRATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_DBTUNE_DATA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_KEYSET_TABLE_CREATE_FAILED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_KEYSET_TABLE_REMOVE_FAILED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_HISTORY_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ST_GEOMETRY_TYPE_NOT_INSTALLED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_CONNECTION_PROPERTY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_RASTER_CODEC_ERROR">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_ARCHIVE_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DBMS_CONSTRAINT_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DBMS_CONSTRAINT_EXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDE_WARNING">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_ETYPE_CHANGED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ROWS_DELETED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TOO_MANY_DISTINCTS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NULL_VALUE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_ROWS_UPDATED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_CPGCVT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_CPGHOME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DBMS_DOES_NOT_SUPPORT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_FUNCTION_ID">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_LAYERS_UPDATE_FAILED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_LOCALIZED_MESSAGE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIAL_INDEX_NOT_CREATED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_FUNC_UNSUPPORTED_ON_DBMS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SQL_NOT_CACHED">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_OBJECT_NOEXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SDO_VARRAY_LIMIT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_SPATIALREF_NO_CLUSTER_TOL">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_NO_COMPRESS_STATUS">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_LAYERGRID_OBJECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_QUERY_KEYSET_NOT_SET">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_RASTER_COL_NAME">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_KEYSET_OPERATION">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GEOM_TYPE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_GEOR_METADATA">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_PDQ_BIND_MISMATCH">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_TABLE_NOT_HISTORY">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_DEPENDENT_OBJECTS_EXIST">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_RELEASE_INCOMPATIBLE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INVALID_REVOKE_SELECT">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_OLD_DCDRIVER">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.DataSourcesGDB.sdeError.SDE_E_SE_INSTANCE_OLD_DBRELEASE">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+  </members>
+</doc>

@@ -87,6 +87,7 @@
             this.添加标注ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.axToolbarControl2 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.axPageLayoutControl1 = new ESRI.ArcGIS.Controls.AxPageLayoutControl();
@@ -95,7 +96,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
@@ -112,6 +112,7 @@
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).BeginInit();
@@ -120,7 +121,6 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -155,9 +155,10 @@
             this.barEditItem3,
             this.start_time,
             this.end_time,
-            this.delete_ele});
+            this.delete_ele,
+            this.ribbonControl1.SearchEditItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl1.MaxItemId = 34;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -173,13 +174,13 @@
             this.repositoryItemDateEdit2,
             this.repositoryItemDateEdit3});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
-            this.ribbonControl1.Size = new System.Drawing.Size(1500, 184);
+            this.ribbonControl1.Size = new System.Drawing.Size(1688, 224);
             // 
             // openMxd
             // 
             this.openMxd.Caption = "打开mxd";
-            this.openMxd.Glyph = ((System.Drawing.Image)(resources.GetObject("openMxd.Glyph")));
             this.openMxd.Id = 1;
+            this.openMxd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("openMxd.ImageOptions.Image")));
             this.openMxd.Name = "openMxd";
             this.openMxd.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.openMxd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.openMxd_ItemClick);
@@ -187,8 +188,8 @@
             // shapeQuery
             // 
             this.shapeQuery.Caption = "图形查询";
-            this.shapeQuery.Glyph = ((System.Drawing.Image)(resources.GetObject("shapeQuery.Glyph")));
             this.shapeQuery.Id = 5;
+            this.shapeQuery.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("shapeQuery.ImageOptions.Image")));
             this.shapeQuery.Name = "shapeQuery";
             this.shapeQuery.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.shapeQuery.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.shapeQuery_ItemClick);
@@ -196,8 +197,8 @@
             // clearShape
             // 
             this.clearShape.Caption = "结束查询";
-            this.clearShape.Glyph = ((System.Drawing.Image)(resources.GetObject("clearShape.Glyph")));
             this.clearShape.Id = 6;
+            this.clearShape.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("clearShape.ImageOptions.Image")));
             this.clearShape.Name = "clearShape";
             this.clearShape.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.clearShape.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.clearShape_ItemClick);
@@ -205,8 +206,8 @@
             // selection
             // 
             this.selection.Caption = "查看选择集";
-            this.selection.Glyph = ((System.Drawing.Image)(resources.GetObject("selection.Glyph")));
             this.selection.Id = 7;
+            this.selection.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("selection.ImageOptions.Image")));
             this.selection.Name = "selection";
             this.selection.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.selection.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.selection_ItemClick);
@@ -214,8 +215,8 @@
             // addLegend
             // 
             this.addLegend.Caption = "添加图例";
-            this.addLegend.Glyph = ((System.Drawing.Image)(resources.GetObject("addLegend.Glyph")));
             this.addLegend.Id = 8;
+            this.addLegend.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addLegend.ImageOptions.Image")));
             this.addLegend.Name = "addLegend";
             this.addLegend.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.addLegend.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addLegend_ItemClick);
@@ -223,8 +224,8 @@
             // barButtonItem1
             // 
             this.barButtonItem1.Caption = "添加指北针";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 9;
+            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
@@ -232,8 +233,8 @@
             // addScaleBar
             // 
             this.addScaleBar.Caption = "添加比例尺";
-            this.addScaleBar.Glyph = ((System.Drawing.Image)(resources.GetObject("addScaleBar.Glyph")));
             this.addScaleBar.Id = 10;
+            this.addScaleBar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addScaleBar.ImageOptions.Image")));
             this.addScaleBar.Name = "addScaleBar";
             this.addScaleBar.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.addScaleBar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.addScaleBar_ItemClick);
@@ -241,8 +242,8 @@
             // exportToImg
             // 
             this.exportToImg.Caption = "导出";
-            this.exportToImg.Glyph = ((System.Drawing.Image)(resources.GetObject("exportToImg.Glyph")));
             this.exportToImg.Id = 11;
+            this.exportToImg.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("exportToImg.ImageOptions.Image")));
             this.exportToImg.Name = "exportToImg";
             this.exportToImg.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.exportToImg.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.exportToImg_ItemClick);
@@ -250,8 +251,8 @@
             // openSHp
             // 
             this.openSHp.Caption = "打开shapefile";
-            this.openSHp.Glyph = ((System.Drawing.Image)(resources.GetObject("openSHp.Glyph")));
             this.openSHp.Id = 14;
+            this.openSHp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("openSHp.ImageOptions.Image")));
             this.openSHp.Name = "openSHp";
             this.openSHp.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.openSHp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.openSHp_ItemClick);
@@ -259,8 +260,8 @@
             // add_btn
             // 
             this.add_btn.Caption = "增加";
-            this.add_btn.Glyph = ((System.Drawing.Image)(resources.GetObject("add_btn.Glyph")));
             this.add_btn.Id = 15;
+            this.add_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("add_btn.ImageOptions.Image")));
             this.add_btn.Name = "add_btn";
             this.add_btn.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.add_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.add_btn_ItemClick);
@@ -268,8 +269,8 @@
             // delete_btn
             // 
             this.delete_btn.Caption = "删除";
-            this.delete_btn.Glyph = ((System.Drawing.Image)(resources.GetObject("delete_btn.Glyph")));
             this.delete_btn.Id = 16;
+            this.delete_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("delete_btn.ImageOptions.Image")));
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.delete_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delete_btn_ItemClick);
@@ -277,8 +278,8 @@
             // barButtonItem2
             // 
             this.barButtonItem2.Caption = "每日疫情";
-            this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 17;
+            this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
@@ -304,8 +305,8 @@
             // drawPolygon
             // 
             this.drawPolygon.Caption = "绘制多边形";
-            this.drawPolygon.Glyph = ((System.Drawing.Image)(resources.GetObject("drawPolygon.Glyph")));
             this.drawPolygon.Id = 19;
+            this.drawPolygon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("drawPolygon.ImageOptions.Image")));
             this.drawPolygon.Name = "drawPolygon";
             this.drawPolygon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.drawPolygon.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.drawPolygon_ItemClick);
@@ -322,8 +323,8 @@
             // drawRec
             // 
             this.drawRec.Caption = "绘制矩形";
-            this.drawRec.Glyph = ((System.Drawing.Image)(resources.GetObject("drawRec.Glyph")));
             this.drawRec.Id = 21;
+            this.drawRec.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("drawRec.ImageOptions.Image")));
             this.drawRec.Name = "drawRec";
             this.drawRec.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.drawRec.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.drawRec_ItemClick);
@@ -331,8 +332,8 @@
             // drawEnd
             // 
             this.drawEnd.Caption = "结束绘制";
-            this.drawEnd.Glyph = ((System.Drawing.Image)(resources.GetObject("drawEnd.Glyph")));
             this.drawEnd.Id = 22;
+            this.drawEnd.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("drawEnd.ImageOptions.Image")));
             this.drawEnd.Name = "drawEnd";
             this.drawEnd.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.drawEnd.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.drawEnd_ItemClick);
@@ -346,8 +347,8 @@
             // circleDraw
             // 
             this.circleDraw.Caption = "绘制圆";
-            this.circleDraw.Glyph = ((System.Drawing.Image)(resources.GetObject("circleDraw.Glyph")));
             this.circleDraw.Id = 24;
+            this.circleDraw.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("circleDraw.ImageOptions.Image")));
             this.circleDraw.Name = "circleDraw";
             this.circleDraw.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.circleDraw.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.drawCircle_ItemClick);
@@ -355,8 +356,8 @@
             // query_btn
             // 
             this.query_btn.Caption = "查询";
-            this.query_btn.Glyph = ((System.Drawing.Image)(resources.GetObject("query_btn.Glyph")));
             this.query_btn.Id = 25;
+            this.query_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("query_btn.ImageOptions.Image")));
             this.query_btn.Name = "query_btn";
             this.query_btn.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.query_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.query_btn_ItemClick);
@@ -364,8 +365,8 @@
             // Statics_btn
             // 
             this.Statics_btn.Caption = "疫情统计";
-            this.Statics_btn.Glyph = ((System.Drawing.Image)(resources.GetObject("Statics_btn.Glyph")));
             this.Statics_btn.Id = 26;
+            this.Statics_btn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Statics_btn.ImageOptions.Image")));
             this.Statics_btn.Name = "Statics_btn";
             this.Statics_btn.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.Statics_btn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Statics_btn_ItemClick);
@@ -373,8 +374,8 @@
             // route_Search
             // 
             this.route_Search.Caption = "轨迹绘制";
-            this.route_Search.Glyph = ((System.Drawing.Image)(resources.GetObject("route_Search.Glyph")));
             this.route_Search.Id = 27;
+            this.route_Search.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("route_Search.ImageOptions.Image")));
             this.route_Search.Name = "route_Search";
             this.route_Search.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.route_Search.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.route_Search_ItemClick);
@@ -458,8 +459,8 @@
             // delete_ele
             // 
             this.delete_ele.Caption = "删除";
-            this.delete_ele.Glyph = ((System.Drawing.Image)(resources.GetObject("delete_ele.Glyph")));
             this.delete_ele.Id = 33;
+            this.delete_ele.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("delete_ele.ImageOptions.Image")));
             this.delete_ele.Name = "delete_ele";
             this.delete_ele.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.delete_ele.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.delete_ele_ItemClick);
@@ -572,18 +573,18 @@
             this.axTOCControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
-            this.axTOCControl1.Size = new System.Drawing.Size(475, 678);
+            this.axTOCControl1.Size = new System.Drawing.Size(530, 784);
             this.axTOCControl1.TabIndex = 1;
             this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
             // 
             // axToolbarControl1
             // 
             this.axToolbarControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.axToolbarControl1.Location = new System.Drawing.Point(477, 2);
+            this.axToolbarControl1.Location = new System.Drawing.Point(532, 2);
             this.axToolbarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axToolbarControl1.Name = "axToolbarControl1";
             this.axToolbarControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl1.OcxState")));
-            this.axToolbarControl1.Size = new System.Drawing.Size(1013, 28);
+            this.axToolbarControl1.Size = new System.Drawing.Size(1146, 28);
             this.axToolbarControl1.TabIndex = 2;
             // 
             // axMapControl1
@@ -593,7 +594,7 @@
             this.axMapControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(1001, 615);
+            this.axMapControl1.Size = new System.Drawing.Size(1134, 718);
             this.axMapControl1.TabIndex = 3;
             this.axMapControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl1_OnMouseDown);
             this.axMapControl1.OnAfterScreenDraw += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnAfterScreenDrawEventHandler(this.axMapControl1_OnAfterScreenDraw);
@@ -607,26 +608,26 @@
             this.移除图层ToolStripMenuItem,
             this.添加标注ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(166, 88);
             // 
             // 打开属性表ToolStripMenuItem
             // 
             this.打开属性表ToolStripMenuItem.Name = "打开属性表ToolStripMenuItem";
-            this.打开属性表ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.打开属性表ToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
             this.打开属性表ToolStripMenuItem.Text = "打开属性表";
             this.打开属性表ToolStripMenuItem.Click += new System.EventHandler(this.打开属性表ToolStripMenuItem_Click);
             // 
             // 移除图层ToolStripMenuItem
             // 
             this.移除图层ToolStripMenuItem.Name = "移除图层ToolStripMenuItem";
-            this.移除图层ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.移除图层ToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
             this.移除图层ToolStripMenuItem.Text = "移除图层";
             this.移除图层ToolStripMenuItem.Click += new System.EventHandler(this.移除图层ToolStripMenuItem_Click);
             // 
             // 添加标注ToolStripMenuItem
             // 
             this.添加标注ToolStripMenuItem.Name = "添加标注ToolStripMenuItem";
-            this.添加标注ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
+            this.添加标注ToolStripMenuItem.Size = new System.Drawing.Size(165, 28);
             this.添加标注ToolStripMenuItem.Text = "添加标注";
             this.添加标注ToolStripMenuItem.Click += new System.EventHandler(this.添加标注ToolStripMenuItem_Click);
             // 
@@ -635,35 +636,44 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(477, 30);
+            this.tabControl1.Location = new System.Drawing.Point(532, 30);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1013, 650);
+            this.tabControl1.Size = new System.Drawing.Size(1146, 756);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.axLicenseControl1);
             this.tabPage1.Controls.Add(this.axMapControl1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1005, 619);
+            this.tabPage1.Size = new System.Drawing.Size(1138, 722);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "数据视图";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // axLicenseControl1
+            // 
+            this.axLicenseControl1.Enabled = true;
+            this.axLicenseControl1.Location = new System.Drawing.Point(161, 248);
+            this.axLicenseControl1.Name = "axLicenseControl1";
+            this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
+            this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
+            this.axLicenseControl1.TabIndex = 4;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.axToolbarControl2);
             this.tabPage2.Controls.Add(this.axPageLayoutControl1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1102, 720);
+            this.tabPage2.Size = new System.Drawing.Size(1070, 724);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "页面视图";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -673,7 +683,7 @@
             this.axToolbarControl2.Location = new System.Drawing.Point(5, 5);
             this.axToolbarControl2.Name = "axToolbarControl2";
             this.axToolbarControl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl2.OcxState")));
-            this.axToolbarControl2.Size = new System.Drawing.Size(564, 28);
+            this.axToolbarControl2.Size = new System.Drawing.Size(630, 28);
             this.axToolbarControl2.TabIndex = 8;
             // 
             // axPageLayoutControl1
@@ -683,7 +693,7 @@
             this.axPageLayoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axPageLayoutControl1.Name = "axPageLayoutControl1";
             this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
-            this.axPageLayoutControl1.Size = new System.Drawing.Size(1098, 716);
+            this.axPageLayoutControl1.Size = new System.Drawing.Size(1066, 720);
             this.axPageLayoutControl1.TabIndex = 0;
             this.axPageLayoutControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseDownEventHandler(this.axPageLayoutControl1_OnMouseDown);
             this.axPageLayoutControl1.OnMouseUp += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseUpEventHandler(this.axPageLayoutControl1_OnMouseUp);
@@ -694,11 +704,11 @@
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(0, 184);
+            this.tabControl2.Location = new System.Drawing.Point(0, 224);
             this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1500, 713);
+            this.tabControl2.Size = new System.Drawing.Size(1688, 822);
             this.tabControl2.TabIndex = 8;
             // 
             // tabPage3
@@ -706,11 +716,11 @@
             this.tabPage3.Controls.Add(this.tabControl1);
             this.tabPage3.Controls.Add(this.axToolbarControl1);
             this.tabPage3.Controls.Add(this.axTOCControl1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(1492, 682);
+            this.tabPage3.Size = new System.Drawing.Size(1680, 788);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "空间展示";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -718,11 +728,11 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.gridControl1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
+            this.tabPage4.Location = new System.Drawing.Point(4, 30);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1492, 775);
+            this.tabPage4.Size = new System.Drawing.Size(1680, 788);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "属性数据";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -736,36 +746,28 @@
             this.gridControl1.Margin = new System.Windows.Forms.Padding(2);
             this.gridControl1.MenuManager = this.ribbonControl1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1488, 771);
+            this.gridControl1.Size = new System.Drawing.Size(1676, 784);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 408;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
             // 
-            // axLicenseControl1
-            // 
-            this.axLicenseControl1.Enabled = true;
-            this.axLicenseControl1.Location = new System.Drawing.Point(161, 248);
-            this.axLicenseControl1.Name = "axLicenseControl1";
-            this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
-            this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
-            this.axLicenseControl1.TabIndex = 4;
-            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 897);
+            this.ClientSize = new System.Drawing.Size(1688, 1046);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -787,6 +789,7 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axToolbarControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axPageLayoutControl1)).EndInit();
@@ -795,7 +798,6 @@
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axLicenseControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

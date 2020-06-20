@@ -679,13 +679,23 @@ namespace ArcgisEngineApplication1
                         return;
                     }
                     gridView1.DeleteSelectedRows();
-                   
+                    ArrayList arr = new ArrayList();
+                    DataTable dt = OperateDatabase.select("data", arr);
+                    this.gridControl1.DataSource = dt;
+                    this.tabControl2.SelectedIndex = 1;
+                    this.gridControl1.Update();
+                    this.gridControl1.RefreshDataSource();
+                    this.gridControl1.Refresh();
+                    this.gridView1.RefreshData();
+                    
+                    gridView1.RefreshData();
+                    this.tabControl2.Update();
                 }
             }
             else {
                 MessageBox.Show("请先选择一行");
             }
-            
+
         }
 
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -714,6 +724,15 @@ namespace ArcgisEngineApplication1
             {
                 MessageBox.Show("该值修改失败");
             }
+            arr = new ArrayList();
+            DataTable dt = OperateDatabase.select("data", arr);
+            this.gridControl1.DataSource = dt;
+            this.tabControl2.SelectedIndex = 1;
+            this.gridControl1.Update();
+            this.gridControl1.RefreshDataSource();
+            this.gridControl1.Refresh();
+            gridView1.RefreshData();
+            this.tabControl2.Update();
         }
 
         private void Statics_btn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

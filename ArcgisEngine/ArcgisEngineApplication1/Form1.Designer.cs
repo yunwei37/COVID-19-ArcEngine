@@ -128,6 +128,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
             this.openMxd,
             this.shapeQuery,
             this.clearShape,
@@ -155,8 +156,7 @@
             this.barEditItem3,
             this.start_time,
             this.end_time,
-            this.delete_ele,
-            this.ribbonControl1.SearchEditItem});
+            this.delete_ele});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ribbonControl1.MaxItemId = 34;
@@ -573,18 +573,18 @@
             this.axTOCControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
-            this.axTOCControl1.Size = new System.Drawing.Size(530, 784);
+            this.axTOCControl1.Size = new System.Drawing.Size(260, 784);
             this.axTOCControl1.TabIndex = 1;
             this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
             // 
             // axToolbarControl1
             // 
             this.axToolbarControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.axToolbarControl1.Location = new System.Drawing.Point(532, 2);
+            this.axToolbarControl1.Location = new System.Drawing.Point(262, 2);
             this.axToolbarControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axToolbarControl1.Name = "axToolbarControl1";
             this.axToolbarControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axToolbarControl1.OcxState")));
-            this.axToolbarControl1.Size = new System.Drawing.Size(1146, 28);
+            this.axToolbarControl1.Size = new System.Drawing.Size(1416, 28);
             this.axToolbarControl1.TabIndex = 2;
             // 
             // axMapControl1
@@ -594,7 +594,7 @@
             this.axMapControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(1134, 718);
+            this.axMapControl1.Size = new System.Drawing.Size(1404, 718);
             this.axMapControl1.TabIndex = 3;
             this.axMapControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnMouseDownEventHandler(this.axMapControl1_OnMouseDown);
             this.axMapControl1.OnAfterScreenDraw += new ESRI.ArcGIS.Controls.IMapControlEvents2_Ax_OnAfterScreenDrawEventHandler(this.axMapControl1_OnAfterScreenDraw);
@@ -636,11 +636,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(532, 30);
+            this.tabControl1.Location = new System.Drawing.Point(262, 30);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1146, 756);
+            this.tabControl1.Size = new System.Drawing.Size(1416, 756);
             this.tabControl1.TabIndex = 6;
             // 
             // tabPage1
@@ -651,7 +651,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1138, 722);
+            this.tabPage1.Size = new System.Drawing.Size(1408, 722);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "数据视图";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -673,7 +673,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1070, 724);
+            this.tabPage2.Size = new System.Drawing.Size(1138, 722);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "页面视图";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -693,7 +693,7 @@
             this.axPageLayoutControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axPageLayoutControl1.Name = "axPageLayoutControl1";
             this.axPageLayoutControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPageLayoutControl1.OcxState")));
-            this.axPageLayoutControl1.Size = new System.Drawing.Size(1066, 720);
+            this.axPageLayoutControl1.Size = new System.Drawing.Size(1134, 718);
             this.axPageLayoutControl1.TabIndex = 0;
             this.axPageLayoutControl1.OnMouseDown += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseDownEventHandler(this.axPageLayoutControl1_OnMouseDown);
             this.axPageLayoutControl1.OnMouseUp += new ESRI.ArcGIS.Controls.IPageLayoutControlEvents_Ax_OnMouseUpEventHandler(this.axPageLayoutControl1_OnMouseUp);
